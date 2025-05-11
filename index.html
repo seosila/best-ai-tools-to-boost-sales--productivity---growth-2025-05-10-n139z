@@ -3,16 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enhanced Directory Page</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best AI Tools Directory | Boost Sales & Productivity</title>
     <meta name="description" content="Discover the best AI tools to boost your sales, productivity, and business growth. Curated directory of top AI solutions.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sellbetterai.com/">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
 </head>
 <body>
     
@@ -47,25 +43,25 @@
                 <!-- Search Input -->
                 <input type="text" placeholder="Search by tool name..." class="w-full md:w-1/3 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600">
                 <!-- Category Dropdown -->
-                <select class="w-full md:w-1/3 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600">
-                    <option value="tools.html">Select a Category</option>
-                    <option value="sales-ai-tools">Sales AI Tools</option>
-                    <option value="ai-crms-and-assistants">AI CRMs & Assistants</option>
-                    <option value="email-outreach-ai">Email & Outreach AI</option>
-                    <option value="chatbots-and-virtual-agents">Chatbots & Virtual Agents</option>
-                    <option value="landing-page-builders">Landing Page Builders</option>
-                    <option value="conversion-optimization-cro">Conversion Optimization (CRO)</option>
-                    <option value="social-media-ai-tools">Social Media AI Tools</option>
-                    <option value="content-and-copywriting-ai">Content & Copywriting AI</option>
-                    <option value="video-ai-tools">Video AI Tools</option>
-                    <option value="voice-ai-tools">Voice AI Tools</option>
-                    <option value="ecommerce-ai-tools">eCommerce AI Tools</option>
-                    <option value="analytics-and-insights">Analytics & Insights</option>
-                    <option value="customer-support-ai">Customer Success AI</option>
-                    <option value="affiliate-marketing-ai">Affiliate Marketing AI</option>
-                    <option value="pricing-and-revenue-optimization">Pricing & Revenue Optimization</option>
-                    <option value="seo-ai-tools">SEO AI Tools</option>
-                    <option value="ad-copy-and-creatives-generators">Ad Copy & Creatives Generators</option>
+                <select onchange="location = this.value" class="w-full md:w-1/3 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600">
+                    <option value="#">Select a Category</option>
+                    <option value="tools/sales-ai-tools">Sales AI Tools</option>
+                    <option value="tools/ai-crms-and-assistants">AI CRMs & Assistants</option>
+                    <option value="tools/email-outreach-ai">Email & Outreach AI</option>
+                    <option value="tools/chatbots-and-virtual-agents">Chatbots & Virtual Agents</option>
+                    <option value="tools/landing-page-builders">Landing Page Builders</option>
+                    <option value="tools/conversion-optimization-cro">Conversion Optimization (CRO)</option>
+                    <option value="tools/social-media-ai-tools">Social Media AI Tools</option>
+                    <option value="tools/content-and-copywriting-ai">Content & Copywriting AI</option>
+                    <option value="tools/video-ai-tools">Video AI Tools</option>
+                    <option value="tools/voice-ai-tools">Voice AI Tools</option>
+                    <option value="tools/ecommerce-ai-tools">eCommerce AI Tools</option>
+                    <option value="tools/analytics-and-insights">Analytics & Insights</option>
+                    <option value="tools/customer-support-ai">Customer Success AI</option>
+                    <option value="tools/affiliate-marketing-ai">Affiliate Marketing AI</option>
+                    <option value="tools/pricing-and-revenue-optimization">Pricing & Revenue Optimization</option>
+                    <option value="tools/seo-ai-tools">SEO AI Tools</option>
+                    <option value="tools/ad-copy-and-creatives-generators">Ad Copy & Creatives Generators</option>
                 </select>
                 <!-- Search Button -->
                 <button class="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition duration-300">Search</button>
@@ -111,43 +107,47 @@
         </div>
     </section>
 
+    <div class="text-center py-8">
+        <h2 class="text-3xl font-bold text-gray-900">Popular AI Tools Categories</h2>
+    </div>
+
     <section id="directory" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 hover:scale-105 border border-gray-100 flex flex-col items-center p-6">
                     <i class="fas fa-chart-line text-4xl text-purple-600 mb-4"></i>
                     <h3 class="text-xl font-semibold mb-4 text-gray-900">AI CRMs & Assistants</h3>
-                    <a href="https://sellbetterai.com/ai-crms-and-assistants" class="inline-block bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition duration-300">Explore Tools</a>
+                    <a href="https://sellbetterai.com/tools/ai-crms-and-assistants" class="inline-block bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition duration-300">Explore Tools</a>
                 </div>
 
                 <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 hover:scale-105 border border-gray-100 flex flex-col items-center p-6">
                     <i class="fas fa-envelope text-4xl text-blue-600 mb-4"></i>
                     <h3 class="text-xl font-semibold mb-4 text-gray-900">Email & Outreach AI</h3>
-                    <a href="https://sellbetterai.com/email-outreach-ai" class="inline-block bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition duration-300">Explore Tools</a>
+                    <a href="https://sellbetterai.com/tools/email-outreach-ai" class="inline-block bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition duration-300">Explore Tools</a>
                 </div>
 
                 <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 hover:scale-105 border border-gray-100 flex flex-col items-center p-6">
                     <i class="fas fa-robot text-4xl text-green-600 mb-4"></i>
                     <h3 class="text-xl font-semibold mb-4 text-gray-900">Chatbots & Virtual Agents</h3>
-                    <a href="https://sellbetterai.com/chatbots-and-virtual-agents" class="inline-block bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition duration-300">Explore Tools</a>
+                    <a href="https://sellbetterai.com/tools/chatbots-and-virtual-agents" class="inline-block bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition duration-300">Explore Tools</a>
                 </div>
 
                 <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 hover:scale-105 border border-gray-100 flex flex-col items-center p-6">
                     <i class="fas fa-file-alt text-4xl text-red-600 mb-4"></i>
                     <h3 class="text-xl font-semibold mb-4 text-gray-900">Landing Page Builders</h3>
-                    <a href="https://sellbetterai.com/landing-page-builders" class="inline-block bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition duration-300">Explore Tools</a>
+                    <a href="https://sellbetterai.com/tools/landing-page-builders" class="inline-block bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition duration-300">Explore Tools</a>
                 </div>
 
                 <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 hover:scale-105 border border-gray-100 flex flex-col items-center p-6">
                     <i class="fas fa-chart-pie text-4xl text-yellow-600 mb-4"></i>
                     <h3 class="text-xl font-semibold mb-4 text-gray-900">Conversion Optimization (CRO)</h3>
-                    <a href="https://sellbetterai.com/conversion-optimization-cro" class="inline-block bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition duration-300">Explore Tools</a>
+                    <a href="https://sellbetterai.com/tools/conversion-optimization-cro" class="inline-block bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition duration-300">Explore Tools</a>
                 </div>
 
                 <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 hover:scale-105 border border-gray-100 flex flex-col items-center p-6">
                     <i class="fas fa-share-alt text-4xl text-indigo-600 mb-4"></i>
                     <h3 class="text-xl font-semibold mb-4 text-gray-900">Social Media AI Tools</h3>
-                    <a href="https://sellbetterai.com/social-media-ai-tools" class="inline-block bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition duration-300">Explore Tools</a>
+                    <a href="https://sellbetterai.com/tools/social-media-ai-tools" class="inline-block bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition duration-300">Explore Tools</a>
                 </div>
             </div>
         </div>
