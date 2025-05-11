@@ -54,6 +54,20 @@
       </div>
 
       <a href="https://chat.openai.com" target="_blank" class="inline-block bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition duration-300 mt-4">Visit ChatGPT</a>
+
+      <!-- Like and Dislike Buttons -->
+      <div class="flex items-center space-x-4 mt-6">
+        <button id="likeButton" class="flex items-center space-x-2 bg-green-100 text-green-800 px-4 py-2 rounded-lg hover:bg-green-200 transition">
+          <i class="fas fa-thumbs-up"></i>
+          <span>Like</span>
+          <span id="likeCount" class="ml-2">0</span>
+        </button>
+        <button id="dislikeButton" class="flex items-center space-x-2 bg-red-100 text-red-800 px-4 py-2 rounded-lg hover:bg-red-200 transition">
+          <i class="fas fa-thumbs-down"></i>
+          <span>Dislike</span>
+          <span id="dislikeCount" class="ml-2">0</span>
+        </button>
+      </div>
     </section>
 
     <!-- Sidebar: Featured Tools -->
@@ -161,7 +175,50 @@
           });
         });
       }
+
+      const likeButton = document.getElementById('likeButton');
+      const dislikeButton = document.getElementById('dislikeButton');
+      const likeCount = document.getElementById('likeCount');
+      const dislikeCount = document.getElementById('dislikeCount');
+
+      // Initialize counts from localStorage
+      const storedLikes = localStorage.getItem('chatgptLikes');
+      const storedDislikes = localStorage.getItem('chatgptDislikes');
+      likeCount.textContent = storedLikes ? storedLikes : 0;
+      dislikeCount.textContent = storedDislikes ? storedDislikes : 0;
+
+      // Check if user has already voted in this session
+      const sessionVoted = sessionStorage.getItem('chatgptVoted');
+      if (sessionVoted) {
+        likeButton.disabled = true;
+        dislikeButton.disabled = true;
+      }
+
+      // Like button click event
+      likeButton.addEventListener('click', () => {
+        if (!sessionVoted) {
+          let currentLikes = parseInt(likeCount.textContent);
+          likeCount.textContent = ++currentLikes;
+          localStorage.setItem('chatgptLikes', currentLikes);
+          sessionStorage.setItem('chatgptVoted', 'liked');
+          likeButton.disabled = true;
+          dislikeButton.disabled = true;
+        }
+      });
+
+      // Dislike button click event
+      dislikeButton.addEventListener('click', () => {
+        if (!sessionVoted) {
+          let currentDislikes = parseInt(dislikeCount.textContent);
+          dislikeCount.textContent = ++currentDislikes;
+          localStorage.setItem('chatgptDislikes', currentDislikes);
+          sessionStorage.setItem('chatgptVoted', 'disliked');
+          likeButton.disabled = true;
+          dislikeButton.disabled = true;
+        }
+      });
     });
   </script>
 </body>
 </html>
+
