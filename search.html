@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results | AI Tools Directory</title>
+    <meta name="description" content="Search results for AI tools in our directory. Find the best tools for your needs.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sellbetterai.com/search.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="https://sellbetterai.com/" class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">SellBetterAI</a>
+        </nav>
+    </header>
 
+    <main class="container mx-auto px-4 py-16">
+        <h1 class="text-3xl font-bold mb-6">Search Results</h1>
+        <div id="search-results" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Search results will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 AI Directory. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const query = urlParams.get('query');
+
+            if (query) {
+                document.title = `Search Results for "${query}" | AI Tools Directory`;
+
+                // Simulate search results (replace with actual search logic)
+                const results = [
+                    { name: 'ChatGPT', url: 'tools/chatbots-and-virtual-agents/chatgpt.html', description: 'A powerful chatbot AI tool.' },
+                    { name: 'AI CRM', url: 'tools/ai-crms-and-assistants', description: 'Customer relationship management powered by AI.' },
+                    { name: 'Email Outreach AI', url: 'tools/email-outreach-ai', description: 'Automate your email campaigns with AI.' }
+                ];
+
+                const filteredResults = results.filter(result =>
+                    result.name.toLowerCase().includes(query.toLowerCase()) ||
+                    result.description.toLowerCase().includes(query.toLowerCase())
+                );
+
+                const resultsContainer = document.getElementById('search-results');
+
+                if (filteredResults.length > 0) {
+                    filteredResults.forEach(result => {
+                        const resultCard = document.createElement('div');
+                        resultCard.className = 'bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 hover:scale-105 border border-gray-100 p-6';
+                        resultCard.innerHTML = `
+                            <h2 class="text-xl font-semibold mb-2">${result.name}</h2>
+                            <p class="text-gray-600 mb-4">${result.description}</p>
+                            <a href="${result.url}" class="inline-block bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition duration-300">View Tool</a>
+                        `;
+                        resultsContainer.appendChild(resultCard);
+                    });
+                } else {
+                    resultsContainer.innerHTML = '<p class="text-gray-600">No results found for your search query.</p>';
+                }
+            } else {
+                document.getElementById('search-results').innerHTML = '<p class="text-gray-600">Please enter a search query.</p>';
+            }
+        });
+    </script>
+</body>
+</html>
