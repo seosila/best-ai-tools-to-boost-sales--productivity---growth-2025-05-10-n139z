@@ -1,53 +1,96 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ChatGPT - AI Chatbot Tool | SellBetterAI</title>
-  <meta name="description" content="Discover ChatGPT, the advanced AI chatbot by OpenAI. Perfect for automation, customer support, and real-time conversations. Learn more on SellBetterAI." />
-  <link rel="stylesheet" href="/styles.css" />
-</head>
-<body>
-  <header>
-    <h1>ChatGPT</h1>
-    <p><strong>Category:</strong> Chatbots & Virtual Agents</p>
-  </header>
+<header class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="https://sellbetterai.com/" class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">SellBetterAI</a>
+            
+            <button class="mobile-menu-button md:hidden p-2" aria-label="Toggle menu">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
 
-  <main>
-    <section>
-      <h2>Overview</h2>
-      <p>ChatGPT is an advanced AI chatbot developed by OpenAI. It uses cutting-edge language models to provide natural and intelligent conversations, automate customer support, and assist in content creation and more.</p>
-    </section>
+            <div class="hidden md:flex space-x-8">
+                <a href="../../../tools.html" class="text-gray-600 hover:text-gray-900 transition-colors">Directory</a>
+                <a href="../../../index.html#submit" class="text-gray-600 hover:text-gray-900 transition-colors">Submit a Tool</a>
+            </div>
 
-    <section>
-      <h2>Key Features</h2>
-      <ul>
-        <li>Human-like responses</li>
-        <li>Integrates with websites and apps</li>
-        <li>Customizable and scalable</li>
-        <li>Available via API and web interface</li>
-      </ul>
-    </section>
+            <div class="mobile-menu hidden md:hidden absolute top-full left-0 w-full bg-white border-b border-gray-100">
+                <div class="flex flex-col space-y-4 p-4">
+                    <a href="../../../tools.html" class="text-gray-600 hover:text-gray-900 transition-colors">Directory</a>
+                    <a href="../../../index.html#submit" class="text-gray-600 hover:text-gray-900 transition-colors">Submit a Tool</a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-    <section>
-      <h2>Use Cases</h2>
-      <ul>
-        <li>Customer support automation</li>
-        <li>Personal assistants</li>
-        <li>Content brainstorming</li>
-        <li>Sales chatbots</li>
-      </ul>
-    </section>
+    <main class="pt-20 pb-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center gap-4 mb-8">
+                <img src="../../../assets/chatgpt-logo.png" alt="ChatGPT Logo" class="w-16 h-16 rounded-full shadow-lg">
+                <h1 class="text-4xl font-bold text-gray-900">ChatGPT</h1>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Main Content -->
+                <div class="md:col-span-2">
+                    <div class="bg-white rounded-xl shadow-lg p-6 mb-6">
+                        <h2 class="text-2xl font-semibold mb-4">Category: Chatbots & Virtual Agents</h2>
+                        <div class="flex gap-4 mb-4">
+                            <span class="px-4 py-2 bg-green-100 text-green-600 rounded-full text-sm font-medium">Free</span>
+                            <span class="px-4 py-2 bg-red-100 text-red-600 rounded-full text-sm font-medium">Paid</span>
+                        </div>
+                        <a href="https://chatgpt.com/" class="inline-block bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition duration-300">Visit the site</a>
+                    </div>
 
-    <section>
-      <h2>Official Website</h2>
-      <p><a href="https://chat.openai.com/" target="_blank" rel="noopener">Visit ChatGPT</a></p>
-    </section>
-  </main>
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h2 class="text-2xl font-semibold mb-4">Description</h2>
+                        <p class="text-gray-700 leading-relaxed">ChatGPT is an advanced AI chatbot that helps users with a variety of tasks, from answering questions to generating creative content. It is designed to provide human-like interactions and assist in numerous applications.</p>
+                    </div>
+                </div>
 
-  <footer>
-    <p><a href="/tools/chatbots-and-virtual-agents/">← Back to Chatbots & Virtual Agents</a></p>
-  </footer>
-</body>
-</html>
+                <!-- Sidebar -->
+                <aside class="bg-white rounded-xl shadow-lg p-6">
+                    <!-- Empty for now -->
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Contact</h3>
+                    <p class="mb-2">Email: seosila8@gmail.com</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../../../index.html#hero" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="../../../tools.html" class="hover:text-white transition-colors">Directory</a></li>
+                        <li><a href="../../../index.html#submit" class="hover:text-white transition-colors">Submit Listing</a></li>
+                        <li><a href="../../../index.html#about" class="hover:text-white transition-colors">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://sellbetterai.com/privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="https://sellbetterai.com/terms.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://sellbetterai.com/blog.html" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p>&copy; 2025 AI Directory. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
