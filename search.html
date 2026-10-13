@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Results | AI Tools Directory</title>
+    <title>Search Results | SellBetterAI</title>
     <meta name="description" content="Search the limited SellBetterAI directory of AI tools.">
     <meta name="robots" content="noindex, follow">
     <link rel="canonical" href="https://sellbetterai.com/search.html">
@@ -19,46 +19,136 @@
 
     <main class="container mx-auto px-4 py-16">
         <h1 class="text-3xl font-bold mb-6">Search Results</h1>
-        <p class="text-gray-600 mb-6">Limited search: one tool profile is currently listed.</p>
+        <p class="text-gray-600 mb-6">Search current tool profiles by name, category, or business workflow.</p>
         <div id="search-results" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         </div>
+        <p id="search-status" class="mt-6 text-gray-600" role="status" aria-live="polite"></p>
         <p class="mt-8"><a href="tools.html" class="text-purple-700 hover:underline">Browse the directory</a></p>
     </main>
 
     <footer class="bg-gray-900 text-gray-300 py-12">
         <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2025 AI Directory. All rights reserved.</p>
+            <p>&copy; 2026 SellBetterAI. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        const query = new URLSearchParams(window.location.search).get('query');
+        const query = new URLSearchParams(window.location.search).get('query') || '';
         const resultsContainer = document.getElementById('search-results');
-        const tool = {
-            name: 'ChatGPT',
-            url: 'tools/chatbots-and-virtual-agents/chatgpt/',
-            description: 'AI assistant developed by OpenAI.'
-        };
+        const status = document.getElementById('search-status');
+        const normalizedTerms = query.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
+        const tools = [
+            {
+                name: 'ChatGPT',
+                category: 'Chatbots and Virtual Agents',
+                url: 'tools/chatbots-and-virtual-agents/chatgpt/',
+                description: 'An AI assistant developed by OpenAI.',
+                keywords: 'assistant chatbot virtual agent'
+            },
+            {
+                name: 'Apollo.io',
+                category: 'Sales AI Tools',
+                url: 'tools/sales-ai-tools/apollo/',
+                description: 'B2B sales intelligence and sales engagement for finding and filtering contacts, prospecting, enriching contact and account data, AI-assisted research, lead scoring, and personalized outreach.',
+                keywords: 'sales prospecting contacts accounts enrichment data research lead scoring outreach engagement credits'
+            },
+            {
+                name: 'Clay',
+                category: 'Sales AI Tools',
+                url: 'tools/sales-ai-tools/clay/',
+                description: 'A go-to-market data enrichment and workflow platform for prospecting, combining provider data, enriching lead and account records, and AI-assisted web research.',
+                keywords: 'sales marketing go-to-market prospecting data enrichment providers leads accounts workflow automation Claygent web research actions data credits'
+            },
+            {
+                name: 'Gong',
+                category: 'Sales AI Tools',
+                url: 'tools/sales-ai-tools/gong/',
+                description: 'Revenue and conversation intelligence for analyzing customer conversations and deal activity to support coaching and sales decisions.',
+                keywords: 'sales revenue conversation intelligence customer calls deal activity insights coaching deal review decisions quote-based pricing'
+            },
+            {
+                name: 'HubSpot Sales Hub',
+                category: 'AI CRMs and Assistants',
+                url: 'tools/ai-crms-and-assistants/hubspot-sales-hub/',
+                description: 'Sales software in HubSpot’s customer platform, with CRM records, deal pipeline management, meeting scheduling, sales engagement, and reporting.',
+                keywords: 'sales crm customer records contacts deals pipeline meetings scheduling engagement reporting prospecting agent data agent AI credits onboarding'
+            },
+            {
+                name: 'Salesforce Agentforce Sales (formerly Sales Cloud)',
+                category: 'AI CRMs and Assistants',
+                url: 'tools/ai-crms-and-assistants/salesforce-sales-cloud/',
+                description: 'Sales CRM workflows for records, leads, opportunities, sales activity, pipeline management, and sales automation.',
+                keywords: 'salesforce sales cloud agentforce crm leads opportunities activity pipeline automation edition AI add-ons usage'
+            },
+            {
+                name: 'Instantly',
+                category: 'Email and Outreach AI',
+                url: 'tools/email-outreach-ai/instantly/',
+                description: 'Sales email outreach and prospecting workflows, with separate outreach and credit products.',
+                keywords: 'sales outbound email campaigns prospecting credits outreach deliverability'
+            },
+            {
+                name: 'Klaviyo',
+                category: 'Ecommerce AI Tools',
+                url: 'tools/ecommerce-ai-tools/klaviyo/',
+                description: 'Customer data and marketing tools for ecommerce businesses, including email and mobile messaging workflows.',
+                keywords: 'ecommerce customer profiles email marketing mobile messaging SMS campaigns'
+            },
+            {
+                name: 'Gorgias',
+                category: 'Customer Support AI',
+                url: 'tools/customer-support-ai/gorgias/',
+                description: 'An ecommerce customer-support helpdesk with an AI Agent for pre-purchase questions and post-purchase support.',
+                keywords: 'ecommerce customer service helpdesk tickets AI Agent support conversations pre-purchase post-purchase resolutions'
+            },
+            {
+                name: 'AdCreative.ai',
+                category: 'Ad Copy and Creatives Generators',
+                url: 'tools/ad-copy-and-creatives-generators/adcreative-ai/',
+                description: 'AI-assisted generation of advertising creatives and copy for marketers.',
+                keywords: 'marketing advertising ad copy creative generation campaigns'
+            }
+        ];
 
-        if (!query || !query.trim()) {
-            resultsContainer.textContent = 'Enter a search term on the homepage to search the limited directory.';
-        } else if (`${tool.name} ${tool.description} chatbot`.toLowerCase().includes(query.trim().toLowerCase())) {
-            const card = document.createElement('article');
-            card.className = 'bg-white rounded-xl shadow-lg border border-gray-100 p-6';
-            const heading = document.createElement('h2');
-            heading.className = 'text-xl font-semibold mb-2';
-            heading.textContent = tool.name;
-            const description = document.createElement('p');
-            description.className = 'text-gray-600 mb-4';
-            description.textContent = tool.description;
-            const link = document.createElement('a');
-            link.className = 'inline-block bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition duration-300';
-            link.href = tool.url;
-            link.textContent = 'View Tool';
-            card.append(heading, description, link);
-            resultsContainer.appendChild(card);
+        if (normalizedTerms.length === 0) {
+            status.textContent = 'Enter a tool name, category, or workflow term to search. You can also browse all current listings in the directory.';
         } else {
-            resultsContainer.textContent = `No listed tools matched "${query}".`;
+            const matches = tools.filter((tool) => {
+                const searchableText = `${tool.name} ${tool.category} ${tool.description} ${tool.keywords}`;
+                const normalizedText = searchableText.toLocaleLowerCase();
+                return normalizedTerms.every((term) => normalizedText.includes(term));
+            });
+
+            if (matches.length === 0) {
+                status.textContent = `No current tool profiles matched “${query.trim()}”. Browse the directory to explore available categories.`;
+            } else {
+                status.textContent = `${matches.length} matching ${matches.length === 1 ? 'tool profile' : 'tool profiles'}.`;
+
+                matches.forEach((tool) => {
+                    const card = document.createElement('article');
+                    card.className = 'bg-white rounded-xl shadow-lg border border-gray-100 p-6';
+
+                    const category = document.createElement('p');
+                    category.className = 'text-sm text-purple-700 font-medium mb-2';
+                    category.textContent = tool.category;
+
+                    const heading = document.createElement('h2');
+                    heading.className = 'text-xl font-semibold mb-2';
+                    heading.textContent = tool.name;
+
+                    const description = document.createElement('p');
+                    description.className = 'text-gray-600 mb-4';
+                    description.textContent = tool.description;
+
+                    const link = document.createElement('a');
+                    link.className = 'inline-block bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2';
+                    link.href = tool.url;
+                    link.textContent = `View ${tool.name} profile`;
+
+                    card.append(category, heading, description, link);
+                    resultsContainer.appendChild(card);
+                });
+            }
         }
     </script>
 </body>

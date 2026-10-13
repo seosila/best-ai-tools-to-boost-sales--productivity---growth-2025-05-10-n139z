@@ -24,6 +24,10 @@
     object-fit: contain;
 }
 
+.tool-logo-frame img + .tool-logo-fallback {
+    display: none;
+}
+
 .tool-logo-fallback {
     color: #374151;
     font-size: 0.875rem;

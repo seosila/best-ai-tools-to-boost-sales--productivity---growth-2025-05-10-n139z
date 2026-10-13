@@ -1,16 +1,20 @@
-# Tool logo asset mapping
+# Tool logo asset sources
 
-Keep verified, locally stored product marks in this directory. Do not use a remote image URL, reconstruct a brand mark, or add an asset until its source and permitted use have been checked.
+The locally stored marks below are served by the referenced companies' official websites or official brand resources. They are displayed only to identify the products described on SellBetterAI; their use does not imply sponsorship, endorsement, or affiliation. No permission is claimed or implied. Check current brand terms and obtain any required approval before continued commercial use.
 
-| Tool | Intended local path |
-| --- | --- |
-| ChatGPT | `assets/logos/chatgpt.svg` |
-| Apollo.io | `assets/logos/apollo.svg` |
-| Clay | `assets/logos/clay.svg` |
-| Gong | `assets/logos/gong.svg` |
-| HubSpot Sales Hub | `assets/logos/hubspot-sales-hub.svg` |
-| Salesforce Agentforce Sales | `assets/logos/salesforce-agentforce-sales.svg` |
+| Tool | Local asset | Official source URL | Source type | Checked | Usage notes |
+| --- | --- | --- | --- | --- | --- |
+| ChatGPT | `chatgpt.png` | [https://cdn.openai.com/chatgpt/share-og.png](https://cdn.openai.com/chatgpt/share-og.png) | ChatGPT page's official Open Graph product image; the favicon endpoint was inaccessible to the downloader | 2026-10-13 | OpenAI's brand guidelines apply; permission for directory use is not confirmed. The file is the original image and is proportionally contained in the existing frame. |
+| Apollo | `apollo.svg` | [https://www.apollo.io/icon.svg?icon.11df6mby0rn6l.svg](https://www.apollo.io/icon.svg?icon.11df6mby0rn6l.svg) | Official Apollo site SVG icon | 2026-10-13 | Apollo logo-use terms for this commercial directory placement were not established. |
+| Clay | `clay.png` | [https://cdn.prod.website-files.com/61477f2c24a826836f969afe/6a3a92ab841a6313dc068fb8_dot-com_favicon_2026_512.png](https://cdn.prod.website-files.com/61477f2c24a826836f969afe/6a3a92ab841a6313dc068fb8_dot-com_favicon_2026_512.png) | Clay website favicon served from its official site CDN (source filename indicates 512 × 512; local `clay.png` is 32 × 32) | 2026-10-13 | Clay's official press page says logo/media assets are for editorial purposes and permission is required for non-editorial uses. Whether this directory use qualifies is unresolved. |
+| Gong | `gong.svg` | [https://www.gong.io/marketing-assets/favicon.svg](https://www.gong.io/marketing-assets/favicon.svg) | Gong website SVG favicon; URL is linked by its official site | 2026-10-13 | Gong's media kit provides logos and guidelines, but the available terms did not establish permission for this commercial directory placement. |
+| HubSpot Sales Hub | `hubspot.png` | [https://www.hubspot.com/hubfs/HubSpot_Logos/HubSpot-Inversed-Favicon.png](https://www.hubspot.com/hubfs/HubSpot_Logos/HubSpot-Inversed-Favicon.png) | HubSpot website favicon (PNG) | 2026-10-13 | HubSpot's trademark guidelines apply; permission for third-party commercial directory display is not confirmed. |
+| Salesforce Sales Cloud | `salesforce.ico` | [https://www.salesforce.com/etc/designs/sfdc-www/en_us/favicon.ico](https://www.salesforce.com/etc/designs/sfdc-www/en_us/favicon.ico) | Salesforce website favicon (ICO with 16 px and 32 px images) | 2026-10-13 | Salesforce's trademark guidelines require explicit written authorization for use of its marks and copyrighted material. No authorization was obtained. |
+| Instantly | `instantly.svg` | [https://cdn.prod.website-files.com/63860c8c65e7bef4a1eeebeb/68bfbb700e2932c8884be3ee_Instantly%20Logo%202%20(1).svg](https://cdn.prod.website-files.com/63860c8c65e7bef4a1eeebeb/68bfbb700e2932c8884be3ee_Instantly%20Logo%202%20(1).svg) | SVG logo served by Instantly's official website CDN | 2026-10-13 | Instantly's trademark and brand-use terms apply; permission for commercial directory display is not confirmed. |
+| Klaviyo | `klaviyo.png` | [https://www.klaviyo.com/icons/icon-512x512.png](https://www.klaviyo.com/icons/icon-512x512.png) | PNG app/site icon served by Klaviyo's official website | 2026-10-13 | Klaviyo's trademark and brand-use terms apply; permission for commercial directory display is not confirmed. |
+| Gorgias | `gorgias.svg` | [https://cdn.prod.website-files.com/5e4ff204e7b6f80e402d407a/669a5ab4a69be50c3a94800a_Gorgias%20Logo%20-%20Black.svg](https://cdn.prod.website-files.com/5e4ff204e7b6f80e402d407a/669a5ab4a69be50c3a94800a_Gorgias%20Logo%20-%20Black.svg) | SVG logo served by Gorgias's official website CDN | 2026-10-13 | Gorgias's trademark and brand-use terms apply; permission for commercial directory display is not confirmed. |
+| AdCreative.ai | `adcreative.png` | [https://cdn.prod.website-files.com/661ce890f68a1d352ebbed35/66aa467aba9463ef88f4949d_256.png](https://cdn.prod.website-files.com/661ce890f68a1d352ebbed35/66aa467aba9463ef88f4949d_256.png) | PNG site image served by AdCreative.ai's official website CDN | 2026-10-13 | AdCreative.ai's trademark and brand-use terms apply; permission for commercial directory display is not confirmed. |
 
-These assets are not present yet. Pages therefore render a neutral text fallback rather than a missing image or an unverified existing asset.
+Each logo frame also contains its original text fallback. If an image fails to load, the broken image element is removed and the fallback remains visible. The image itself is decorative (`alt=""`) because the adjacent product name already identifies the listing.
 
-When a verified asset is added, place it in the shared `.tool-logo-frame` used by category cards and profile headers. Supply intrinsic `width` and `height` attributes (96 by 96 is the nominal source box), retain the frame dimensions, and let `object-fit: contain` preserve the asset's aspect ratio. Use `alt=""` when the adjacent card heading or profile H1 already identifies the product; use concise descriptive alternative text only when an image conveys information not present in nearby text.
+The shared `.tool-logo-frame` in `assets/css/tool-logos.css` supplies consistent dimensions and uses `object-fit: contain` so each original image ratio is preserved.

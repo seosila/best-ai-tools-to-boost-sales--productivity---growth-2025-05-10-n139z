@@ -8,139 +8,244 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://sellbetterai.com/">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/tool-logos.css">
+    <link rel="stylesheet" href="assets/css/site.css">
 </head>
-<body>
-    
-    <header class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
-        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="https://sellbetterai.com/" class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">SellBetterAI</a>
-            
-            <button class="mobile-menu-button md:hidden p-2" aria-label="Toggle menu">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
-
-            <div class="hidden md:flex space-x-8">
-                <a href="tools.html" class="text-gray-600 hover:text-gray-900 transition-colors">Directory</a>
-                <a href="submit.html" class="text-gray-600 hover:text-gray-900 transition-colors">Submit a Tool</a>
+<body class="sb-page">
+    <a class="sb-skip-link" href="#main-content">Skip to content</a>
+    <header class="sb-site-header">
+        <nav class="sb-nav sb-container" aria-label="Main navigation">
+            <a class="sb-brand" href="https://sellbetterai.com/" aria-label="SellBetterAI home">SellBetterAI</a>
+            <div class="sb-desktop-nav">
+                <a href="tools.html">Directory</a>
+                <a href="tools.html#sales">Sales tools</a>
+                <a href="tools.html#marketing">Marketing</a>
+                <a href="tools.html#ecommerce">Ecommerce</a>
+                <a class="sb-button sb-button--small" href="submit.html">Suggest a tool</a>
             </div>
-
-            <div class="mobile-menu hidden md:hidden absolute top-full left-0 w-full bg-white border-b border-gray-100">
-                <div class="flex flex-col space-y-4 p-4">
-                    <a href="tools.html" class="text-gray-600 hover:text-gray-900 transition-colors">Directory</a>
-                    <a href="submit.html" class="text-gray-600 hover:text-gray-900 transition-colors">Submit a Tool</a>
-                </div>
+            <button class="sb-menu-button" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+                <span class="sb-menu-icon" aria-hidden="true"></span>
+            </button>
+            <div class="sb-mobile-menu" id="mobile-menu" hidden>
+                <a href="tools.html">Directory</a>
+                <a href="tools.html#sales">Sales tools</a>
+                <a href="tools.html#marketing">Marketing</a>
+                <a href="tools.html#ecommerce">Ecommerce</a>
+                <a href="submit.html">Suggest a tool</a>
             </div>
         </nav>
     </header>
 
-    <section id="hero" class="relative h-[calc(100vh-4rem)] flex items-center justify-center bg-gradient-to-r from-purple-50 to-blue-50">
-        <div class="absolute inset-0 bg-gradient-to-r from-purple-900/70 to-blue-900/70"></div>
-        <div class="container mx-auto px-4 text-center relative z-10">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">AI Tools for Sales, Marketing &amp; Ecommerce</h1>
-            <p class="text-2xl md:text-3xl text-gray-200 mb-8">A growing directory to help you explore tools for your business.</p>
-            <form action="search.html" method="get" class="flex flex-col md:flex-row items-center justify-center gap-4 mt-8">
-                <label for="query" class="sr-only">Search the limited directory</label>
-                <input id="query" name="query" type="search" placeholder="Search the limited directory..." class="w-full md:w-1/3 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600">
-                <button type="submit" class="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition duration-300">Search</button>
-            </form>
-            <p class="text-sm text-gray-200 mt-3">Limited search: one tool profile is currently listed.</p>
-            <a href="tools.html" class="inline-block bg-white text-purple-700 font-semibold px-6 py-3 rounded-lg mt-6 hover:bg-gray-100 transition">Browse the directory</a>
-        </div>
-    </section>
-
-    <section class="py-12 bg-gray-50">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-2xl font-semibold text-gray-900">Explore AI tools by business focus</h2>
-            <p class="text-gray-600 mt-2">Browse sales, marketing, and ecommerce categories in the directory. Some categories are still being built.</p>
-            <div class="flex flex-wrap justify-center gap-4 mt-6">
-                <a href="tools.html#sales" class="text-purple-700 underline">Sales</a>
-                <a href="tools.html#marketing" class="text-purple-700 underline">Marketing</a>
-                <a href="tools.html#ecommerce" class="text-purple-700 underline">Ecommerce</a>
-                <a href="tools.html#other" class="text-purple-700 underline">Other categories</a>
+    <main id="main-content">
+        <section class="sb-hero">
+            <div class="sb-container sb-hero__content">
+                <p class="sb-eyebrow">AI tools for business growth</p>
+                <h1>Find AI tools to grow your business</h1>
+                <p class="sb-hero__intro">Discover tools for sales, marketing, and ecommerce workflows in a growing, focused directory.</p>
+                <form action="search.html" method="get" class="sb-search-form" role="search">
+                    <label class="sb-sr-only" for="query">Search tool names and business workflows</label>
+                    <input id="query" name="query" type="search" placeholder="Search sales, prospecting, CRM..." autocomplete="off">
+                    <button class="sb-button" type="submit">Search tools</button>
+                </form>
+                <p class="sb-search-note">Search tool names, categories, and business workflow terms across current listings.</p>
+                <a class="sb-text-link sb-hero__browse" href="tools.html">Browse the directory <span aria-hidden="true">→</span></a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="submit" class="py-16 bg-gradient-to-r from-purple-600 to-blue-500 text-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Suggest an AI tool for the directory</h2>
-            <p class="text-xl mb-8 opacity-90">The directory is growing, and suggestions are welcome.</p>
-            <a href="submit.html" class="inline-block bg-white text-purple-600 font-semibold px-8 py-4 rounded-lg hover:scale-105 transform transition duration-300 shadow-lg">Submit a Tool</a>
-        </div>
-    </section>
-
-    <section id="about" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="max-w-3xl mx-auto text-center">
-                <h2 class="text-3xl font-bold mb-6 text-gray-900">About Our AI Directory</h2>
-                <p class="text-gray-600 leading-relaxed mb-6">SellBetterAI is a growing directory focused on AI tools for sales, marketing, and ecommerce.</p>
-                <p class="text-gray-600 leading-relaxed">The directory currently has a limited number of tool listings. Category pages that are not ready yet are marked as coming soon.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-gray-900 text-gray-300 py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h3 class="text-white font-semibold mb-4">Contact</h3>
-                    <p class="mb-2">Email: <a href="mailto:seosila8@gmail.com" class="hover:text-white underline">seosila8@gmail.com</a></p>
+        <section class="sb-section" aria-labelledby="business-goals">
+            <div class="sb-container">
+                <div class="sb-section-heading">
+                    <div>
+                        <p class="sb-eyebrow">Browse by business goal</p>
+                        <h2 id="business-goals">Find tools for the work you do</h2>
+                    </div>
+                    <p>Explore categories for the business workflows that matter to your team. Some areas are still being built.</p>
                 </div>
-                <div>
-                    <h3 class="text-white font-semibold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="https://sellbetterai.com/" class="hover:text-white transition-colors">Home</a></li>
-                        <li><a href="tools.html" class="hover:text-white transition-colors">Directory</a></li>
-                        <li><a href="submit.html" class="hover:text-white transition-colors">Submit Listing</a></li>
-                        <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
-                        <li><a href="how-we-choose-tools.html" class="hover:text-white transition-colors">How We Choose Tools</a></li>
-                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-white font-semibold mb-4">Legal</h3>
-                    <ul class="space-y-2">
-                        <li><a href="https://sellbetterai.com/privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
-                        <li><a href="terms.html" class="hover:text-white transition-colors">Terms of Use</a></li>
-                    </ul>
+                <div class="sb-goal-grid">
+                    <a class="sb-goal-card" href="tools.html#sales">
+                        <span class="sb-goal-card__number" aria-hidden="true">01</span>
+                        <span class="sb-goal-card__title">Sales</span>
+                        <span class="sb-goal-card__description">Prospecting, sales intelligence, CRM, and outreach workflows.</span>
+                        <span class="sb-card-link">Explore sales categories <span aria-hidden="true">→</span></span>
+                    </a>
+                    <a class="sb-goal-card" href="tools.html#marketing">
+                        <span class="sb-goal-card__number" aria-hidden="true">02</span>
+                        <span class="sb-goal-card__title">Marketing</span>
+                        <span class="sb-goal-card__description">Explore marketing categories, with unfinished areas clearly marked.</span>
+                        <span class="sb-card-link">Explore marketing categories <span aria-hidden="true">→</span></span>
+                    </a>
+                    <a class="sb-goal-card" href="tools.html#ecommerce">
+                        <span class="sb-goal-card__number" aria-hidden="true">03</span>
+                        <span class="sb-goal-card__title">Ecommerce</span>
+                        <span class="sb-goal-card__description">Browse the ecommerce category and see its current availability.</span>
+                        <span class="sb-card-link">Explore ecommerce categories <span aria-hidden="true">→</span></span>
+                    </a>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-                <p>&copy; 2025 AI Directory. All rights reserved.</p>
+        </section>
+
+        <section class="sb-section sb-section--tinted" aria-labelledby="current-listings">
+            <div class="sb-container">
+                <div class="sb-section-heading">
+                    <div>
+                        <p class="sb-eyebrow">The current directory</p>
+                        <h2 id="current-listings">Explore current tool listings</h2>
+                    </div>
+                    <p>A featured selection from the full directory—not a ranked list or the complete catalogue.</p>
+                </div>
+                <div class="sb-tool-grid">
+                    <article class="sb-tool-card">
+                        <div class="tool-logo-frame" aria-hidden="true"><img src="assets/logos/apollo.svg" alt="" width="256" height="256" onerror="this.remove()"><span class="tool-logo-fallback">Apollo.io</span></div>
+                        <p class="sb-card-category">Sales AI Tools</p>
+                        <h3><a href="tools/sales-ai-tools/apollo/">Apollo.io</a></h3>
+                        <p>A B2B sales intelligence and engagement platform for prospecting, contact information, research, and sales workflows.</p>
+                        <a class="sb-card-link" href="tools/sales-ai-tools/apollo/">View Apollo.io profile <span aria-hidden="true">→</span></a>
+                    </article>
+                    <article class="sb-tool-card">
+                        <div class="tool-logo-frame" aria-hidden="true"><img src="assets/logos/clay.png" alt="" width="32" height="32" onerror="this.remove()"><span class="tool-logo-fallback">Clay</span></div>
+                        <p class="sb-card-category">Sales AI Tools</p>
+                        <h3><a href="tools/sales-ai-tools/clay/">Clay</a></h3>
+                        <p>A go-to-market data enrichment and workflow platform for prospecting, research, and sales processes.</p>
+                        <a class="sb-card-link" href="tools/sales-ai-tools/clay/">View Clay profile <span aria-hidden="true">→</span></a>
+                    </article>
+                    <article class="sb-tool-card">
+                        <div class="tool-logo-frame" aria-hidden="true"><img src="assets/logos/gong.svg" alt="" width="512" height="512" onerror="this.remove()"><span class="tool-logo-fallback">Gong</span></div>
+                        <p class="sb-card-category">Sales AI Tools</p>
+                        <h3><a href="tools/sales-ai-tools/gong/">Gong</a></h3>
+                        <p>Revenue and conversation intelligence for reviewing customer conversations and deal activity.</p>
+                        <a class="sb-card-link" href="tools/sales-ai-tools/gong/">View Gong profile <span aria-hidden="true">→</span></a>
+                    </article>
+                    <article class="sb-tool-card">
+                        <div class="tool-logo-frame" aria-hidden="true"><img src="assets/logos/hubspot.png" alt="" width="288" height="288" onerror="this.remove()"><span class="tool-logo-fallback">HubSpot</span></div>
+                        <p class="sb-card-category">AI CRMs &amp; Assistants</p>
+                        <h3><a href="tools/ai-crms-and-assistants/hubspot-sales-hub/">HubSpot Sales Hub</a></h3>
+                        <p>Sales software within HubSpot’s customer platform, including CRM and pipeline workflows.</p>
+                        <a class="sb-card-link" href="tools/ai-crms-and-assistants/hubspot-sales-hub/">View HubSpot Sales Hub profile <span aria-hidden="true">→</span></a>
+                    </article>
+                    <article class="sb-tool-card">
+                        <div class="tool-logo-frame" aria-hidden="true"><img src="assets/logos/salesforce.ico" alt="" width="32" height="32" onerror="this.remove()"><span class="tool-logo-fallback">Salesforce</span></div>
+                        <p class="sb-card-category">AI CRMs &amp; Assistants</p>
+                        <h3><a href="tools/ai-crms-and-assistants/salesforce-sales-cloud/">Salesforce Agentforce Sales</a></h3>
+                        <p>Sales CRM workflows for leads, opportunities, activity, and pipeline management.</p>
+                        <a class="sb-card-link" href="tools/ai-crms-and-assistants/salesforce-sales-cloud/">View Salesforce Agentforce Sales profile <span aria-hidden="true">→</span></a>
+                    </article>
+                    <article class="sb-tool-card">
+                        <div class="tool-logo-frame" aria-hidden="true"><img src="assets/logos/chatgpt.png" alt="" width="1600" height="900" onerror="this.remove()"><span class="tool-logo-fallback">ChatGPT</span></div>
+                        <p class="sb-card-category">Chatbots &amp; Virtual Agents</p>
+                        <h3><a href="tools/chatbots-and-virtual-agents/chatgpt/">ChatGPT</a></h3>
+                        <p>An AI assistant developed by OpenAI. Visit its profile for the official product link.</p>
+                        <a class="sb-card-link" href="tools/chatbots-and-virtual-agents/chatgpt/">View ChatGPT profile <span aria-hidden="true">→</span></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="sb-section" aria-labelledby="available-categories">
+            <div class="sb-container">
+                <div class="sb-section-heading">
+                    <div>
+                        <p class="sb-eyebrow">Browse the directory</p>
+                        <h2 id="available-categories">Available categories</h2>
+                    </div>
+                    <p>Explore the populated sections of the directory.</p>
+                </div>
+                <div class="sb-category-grid">
+                    <a class="sb-category-card" href="tools/sales-ai-tools/">
+                        <span class="sb-category-card__label">Sales</span>
+                        <span class="sb-category-card__title">Sales AI Tools</span>
+                        <span class="sb-category-card__description">Prospecting, enrichment, and conversation intelligence.</span>
+                        <span class="sb-category-card__count">3 tool profiles</span>
+                    </a>
+                    <a class="sb-category-card" href="tools/ai-crms-and-assistants/">
+                        <span class="sb-category-card__label">Sales</span>
+                        <span class="sb-category-card__title">AI CRMs and Assistants</span>
+                        <span class="sb-category-card__description">CRM platforms and AI-assisted sales workflows.</span>
+                        <span class="sb-category-card__count">2 tool profiles</span>
+                    </a>
+                    <a class="sb-category-card" href="tools/chatbots-and-virtual-agents/">
+                        <span class="sb-category-card__label">Business workflows</span>
+                        <span class="sb-category-card__title">Chatbots and Virtual Agents</span>
+                        <span class="sb-category-card__description">Explore the current ChatGPT listing.</span>
+                        <span class="sb-category-card__count">1 tool profile</span>
+                    </a>
+                </div>
+                <p class="sb-more-categories">Other categories are not launched yet. <a href="tools.html">See directory availability</a>.</p>
+            </div>
+        </section>
+
+        <section class="sb-cta-section" aria-labelledby="suggest-tool">
+            <div class="sb-container sb-cta">
+                <div>
+                    <p class="sb-eyebrow">Help the directory grow</p>
+                    <h2 id="suggest-tool">Suggest a tool for consideration</h2>
+                    <p>Suggestions are reviewed, but submission does not guarantee publication.</p>
+                </div>
+                <a class="sb-button sb-button--light" href="submit.html">Suggest a tool <span aria-hidden="true">→</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="sb-footer">
+        <div class="sb-container">
+            <div class="sb-footer__main">
+                <div class="sb-footer__brand">
+                    <a class="sb-brand sb-brand--footer" href="https://sellbetterai.com/">SellBetterAI</a>
+                    <p>A growing directory focused on AI tools for sales, marketing, and ecommerce.</p>
+                    <p>Email: <a href="mailto:seosila8@gmail.com">seosila8@gmail.com</a></p>
+                </div>
+                <nav aria-label="Directory navigation">
+                    <h2>Explore</h2>
+                    <a href="tools.html">Directory</a>
+                    <a href="tools/sales-ai-tools/">Sales AI Tools</a>
+                    <a href="tools/ai-crms-and-assistants/">AI CRMs and Assistants</a>
+                    <a href="tools/chatbots-and-virtual-agents/">Chatbots and Virtual Agents</a>
+                    <a href="submit.html">Suggest a tool</a>
+                </nav>
+                <nav aria-label="About and legal">
+                    <h2>About SellBetterAI</h2>
+                    <a href="about.html">About</a>
+                    <a href="how-we-choose-tools.html">How We Choose Tools</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="privacy.html">Privacy</a>
+                    <a href="terms.html">Terms</a>
+                </nav>
+            </div>
+            <div class="sb-footer__bottom">
+                <span>SellBetterAI</span>
+                <a href="#main-content">Back to top ↑</a>
             </div>
         </div>
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
-            const mobileMenu = document.querySelector('header nav .mobile-menu');
-            if (mobileMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                    const icon = mobileMenuButton.querySelector('i');
-                    if (icon) {
-                        icon.classList.toggle('fa-bars');
-                        icon.classList.toggle('fa-times');
-                    }
-                });
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuButton = document.querySelector('.sb-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
 
-                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-                mobileMenuLinks.forEach(link => {
-                    link.addEventListener('click', () => {
-                        mobileMenu.classList.add('hidden');
-                        const icon = mobileMenuButton.querySelector('i');
-                        if (icon) {
-                            icon.classList.remove('fa-times');
-                            icon.classList.add('fa-bars');
-                        }
-                    });
-                });
+            if (!menuButton || !mobileMenu) return;
+
+            function setMenuOpen(isOpen) {
+                menuButton.setAttribute('aria-expanded', String(isOpen));
+                menuButton.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+                mobileMenu.hidden = !isOpen;
             }
 
+            menuButton.addEventListener('click', function () {
+                setMenuOpen(menuButton.getAttribute('aria-expanded') !== 'true');
+            });
+
+            mobileMenu.addEventListener('click', function (event) {
+                if (event.target.closest('a')) setMenuOpen(false);
+            });
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') setMenuOpen(false);
+            });
+
+            window.matchMedia('(min-width: 800px)').addEventListener('change', function (event) {
+                if (event.matches) setMenuOpen(false);
+            });
         });
     </script>
-
 </body>
 </html>

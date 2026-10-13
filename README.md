@@ -1,195 +1,83 @@
-# Best AI Tools Directory 🚀
+# SellBetterAI
 
-> Explore the Best AI Tools to Boost Your Sales & Workflow - A comprehensive directory of AI-powered solutions for business growth and productivity.
+[SellBetterAI](https://sellbetterai.com/) is a static HTML directory of AI tools for sales, marketing, and ecommerce. The site has a manually maintained directory, search page, category pages, and individual tool profiles.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/your-badge-id/deploy-status)](https://app.netlify.com/sites/your-site/deploys)
+## Repository structure
 
-## Table of Contents
-- [Overview](#overview)
-- [Features](#features)
-- [Getting Started](#getting-started)
-- [Directory Structure](#directory-structure)
-- [Customization Guide](#customization-guide)
-- [Deployment](#deployment)
-- [Custom Domain Setup](#custom-domain-setup)
-- [Troubleshooting](#troubleshooting)
-- [Resources & Support](#resources--support)
-
-## Overview
-
-This directory website showcases a curated collection of AI tools organized in a responsive 3-column grid layout. Each tool entry includes key information such as name, description, pricing, and category tags.
-
-## Features
-
-- 🎯 Responsive 3-column grid layout
-- 🏷️ Category-based filtering
-- 🔍 Search functionality
-- 💨 Fast loading performance
-- 📱 Mobile-friendly design
-- 🎨 Customizable styling
-- 📊 SEO optimized
-
-## Getting Started
-
-### Prerequisites
-- Node.js (v14 or higher)
-- Git
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/ai-tools-directory.git
-
-# Navigate to project directory
-cd ai-tools-directory
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
+```text
+.
+├── index.html                 # Homepage
+├── tools.html                 # Main directory
+├── search.html                # Client-side search; reads the ?query= parameter
+├── about.html
+├── how-we-choose-tools.html
+├── contact.html
+├── submit.html
+├── privacy.html
+├── terms.html
+├── robots.txt                 # Crawl rules and sitemap reference
+├── sitemap.xml                # Canonical URLs for useful, indexable pages
+├── CNAME                      # Custom-domain value: sellbetterai.com
+├── google268327089e2aaf6b.html # Search-engine site-verification file
+├── blog.html
+├── blog/
+│   ├── index.html
+│   └── directory-listings-guide.html.html
+├── assets/
+│   ├── css/
+│   │   ├── site.css           # Homepage and directory styles
+│   │   └── tool-logos.css     # Shared logo and text-fallback styles
+│   └── logos/                 # Locally stored logo images and their README
+└── tools/
+    ├── <category>/index.html  # Category landing page
+    └── <category>/<tool>/index.html # Tool profile
 ```
 
-## Directory Structure
+The `tools/` tree contains category pages for ad creatives, affiliate marketing, analytics, AI CRMs, chatbots, content, conversion optimization, customer support, ecommerce, email outreach, landing pages, pricing, sales, SEO, social media, video, and voice. Published tool profiles currently include ChatGPT, Apollo, Clay, Gong, HubSpot Sales Hub, Salesforce Sales Cloud, Instantly, Klaviyo, Gorgias, and AdCreative.ai.
 
-```
-ai-tools-directory/
-├── src/
-│   ├── data/
-│   │   ├── tools.json
-│   │   └── categories.json
-│   ├── components/
-│   │   ├── Card.js
-│   │   ├── Grid.js
-│   │   └── Hero.js
-│   ├── styles/
-│   │   └── main.css
-│   └── pages/
-├── public/
-│   └── images/
-├── package.json
-└── README.md
+## Run locally
+
+The site does not require a package manager or build step. From the repository root, start Python's standard-library static server:
+
+```sh
+python -m http.server 8000
 ```
 
-## Customization Guide
+Open [http://localhost:8000/](http://localhost:8000/) in a browser. Stop the server with Ctrl+C. You can also open an HTML file directly, but a local server more closely matches how page-relative links and browser requests work when hosted.
 
-### Adding/Editing Directory Items
+There is no automated test command configured in the repository. For manual checks, open the homepage, directory, search page, category pages, and profiles; try searches using `?query=term`; and inspect the browser console and narrow-screen layout. Some pages load Tailwind CSS from its CDN, so normal external network access may be needed to see their full styling.
 
-1. Navigate to `src/data/tools.json`
-2. Add new tools using the following format:
+## Add a tool profile
 
-```json
-{
-  "id": "tool-name",
-  "name": "Tool Name",
-  "description": "Tool description goes here",
-  "category": ["category1", "category2"],
-  "pricing": "Free/Paid",
-  "url": "https://toolwebsite.com",
-  "image": "/images/tool-image.png"
-}
+1. Create `tools/<category>/<tool>/index.html`, using an existing profile as the template. Keep its canonical URL, title, description, breadcrumb, one H1, source links, and pricing caveats accurate. Use the canonical host `https://sellbetterai.com/`.
+2. Add a card linking to the profile in `tools/<category>/index.html`. Follow that category page's existing logo and text-fallback pattern. Keep an unfinished category marked `noindex, follow` until it is ready for indexing; do not imply it contains more listings than it does.
+3. Add the profile to the `tools` array in `search.html`, including its display name, category, relative profile URL, description, and relevant search keywords. Search results are generated by the page's JavaScript; no separate JSON index exists.
+4. Add the profile's canonical URL to `sitemap.xml` if it contains useful, indexable content. Do not add noindex pages or query-dependent search results.
+5. If a suitable, locally sourced logo is available and approved for use, add it under `assets/logos/`, document its source and usage notes in `assets/logos/README.md`, and use the shared logo/fallback markup. A profile can use the text fallback instead.
+
+Also update any manually maintained counts or links in `index.html` and `tools.html` when the new listing changes them.
+
+## SEO and indexing
+
+- Public page canonicals use `https://sellbetterai.com/`; preserve each page's canonical URL when editing its content.
+- `robots.txt` permits crawling and references `https://sellbetterai.com/sitemap.xml`.
+- Maintain `sitemap.xml` by hand. Include canonical URLs for useful, indexable pages and omit search results and unfinished pages.
+- Category pages that are not ready for search indexing use a `noindex, follow` robots directive. Some populated categories are indexable, so check the actual page before changing its directive.
+- `search.html` is marked `noindex, follow` because its results vary with the query parameter.
+
+## Git workflow
+
+Make changes on a branch or in a working tree, then review them before sharing:
+
+```sh
+git status --short
+git diff
 ```
 
-### Modifying Category Labels
+`git diff` shows changes to tracked files; `git status --short` also reveals new files that need review. Inspect untracked files directly. Run `git diff --check` to check tracked changes for whitespace errors. Stage only the intended files, review the staged changes with `git diff --cached`, and commit when they are ready. Before pushing, review `git status` and confirm the intended branch and commit.
 
-1. Open `src/data/categories.json`
-2. Edit categories using this structure:
+## Hosting and limitations
 
-```json
-{
-  "categories": [
-    {
-      "id": "category-id",
-      "name": "Category Name",
-      "description": "Category description"
-    }
-  ]
-}
-```
+`CNAME` contains `sellbetterai.com`, but that file alone does not identify the hosting provider or configure a complete deployment. No build manifest or GitHub Actions workflow is present in the repository; check the hosting service's settings before changing deployment configuration.
 
-### Updating Hero Section
-
-1. Locate `src/components/Hero.js`
-2. Modify the content:
-
-```jsx
-export default function Hero() {
-  return (
-    <div className="hero">
-      <h1>Your Custom Title</h1>
-      <p>Your custom description</p>
-    </div>
-  )
-}
-```
-
-### Customizing Colors and Styling
-
-1. Navigate to `src/styles/main.css`
-2. Update the CSS variables:
-
-```css
-:root {
-  --primary-color: #007bff;
-  --secondary-color: #6c757d;
-  --background-color: #ffffff;
-  --text-color: #333333;
-}
-```
-
-## Deployment
-
-### Netlify Deployment
-
-1. Push your code to GitHub
-2. Log in to Netlify
-3. Click "New site from Git"
-4. Select your repository
-5. Configure build settings:
-   - Build command: `npm run build`
-   - Publish directory: `dist`
-6. Click "Deploy site"
-
-## Custom Domain Setup
-
-1. Purchase a domain from your preferred registrar
-2. In Netlify:
-   - Go to Site settings > Domain management
-   - Click "Add custom domain"
-   - Enter your domain name
-3. Update DNS settings:
-   - Add CNAME record pointing to your Netlify URL
-   - Add A record if using apex domain
-
-## Troubleshooting
-
-### Common Issues
-
-**Build Failures**
-- Verify Node.js version
-- Check for missing dependencies
-- Validate JSON syntax in data files
-
-**Styling Issues**
-- Clear browser cache
-- Check CSS specificity
-- Verify media query breakpoints
-
-## Resources & Support
-
-- [Documentation Wiki](https://github.com/yourusername/ai-tools-directory/wiki)
-- [Issue Tracker](https://github.com/yourusername/ai-tools-directory/issues)
-- [Contributing Guidelines](CONTRIBUTING.md)
-
-### Community
-- [Discord Server](https://discord.gg/yourserver)
-- [Twitter](https://twitter.com/yourhandle)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Made with ❤️ by [Your Name](https://yourwebsite.com)
+The directory and search index are maintained in HTML by hand rather than generated from a database or content-management system. Product details, availability, and pricing can change, so verify them against official sources when adding or updating profiles. Logo source documentation records provenance and restrictions; inclusion in the repository does not establish permission to use a mark.
