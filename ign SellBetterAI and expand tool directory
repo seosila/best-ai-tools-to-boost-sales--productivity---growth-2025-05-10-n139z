@@ -1,0 +1,39 @@
+ README.md                                          | 238 [32m++[m[31m----[m
+ assets/css/site.css                                | 797 [32m+++++++++++++++++++++[m
+ assets/css/tool-logos.css                          |   4 [32m+[m
+ assets/logos/README.md                             |  28 [32m+[m[31m-[m
+ assets/logos/adcreative.png                        | Bin [31m0[m -> [32m19975[m bytes
+ assets/logos/apollo.svg                            |   3 [32m+[m
+ assets/logos/chatgpt.png                           | Bin [31m0[m -> [32m705565[m bytes
+ assets/logos/clay.png                              | Bin [31m0[m -> [32m2084[m bytes
+ assets/logos/gong.svg                              |   8 [32m+[m
+ assets/logos/gorgias.svg                           |  23 [32m+[m
+ assets/logos/hubspot.png                           | Bin [31m0[m -> [32m5123[m bytes
+ assets/logos/instantly.svg                         |   1 [32m+[m
+ assets/logos/klaviyo.png                           | Bin [31m0[m -> [32m16865[m bytes
+ assets/logos/salesforce.ico                        | Bin [31m0[m -> [32m5430[m bytes
+ blog.html                                          |   2 [32m+[m[31m-[m
+ blog/directory-listings-guide.html.html            |   2 [32m+[m[31m-[m
+ blog/index.html                                    |   2 [32m+[m[31m-[m
+ index.html                                         | 321 [32m++++++[m[31m---[m
+ search.html                                        | 144 [32m+++[m[31m-[m
+ sitemap.xml                                        |  12 [32m+[m
+ tools.html                                         | 338 [32m++++[m[31m-----[m
+ .../adcreative-ai/index.html                       |  77 [32m++[m
+ tools/ad-copy-and-creatives-generators/index.html  |  33 [32m+[m[31m-[m
+ .../hubspot-sales-hub/index.html                   |   4 [32m+[m[31m-[m
+ tools/ai-crms-and-assistants/index.html            |   4 [32m+[m[31m-[m
+ .../salesforce-sales-cloud/index.html              |   2 [32m+[m[31m-[m
+ .../chatbots-and-virtual-agents/chatgpt/index.html |   4 [32m+[m[31m-[m
+ tools/chatbots-and-virtual-agents/index.html       |   4 [32m+[m[31m-[m
+ tools/customer-support-ai/gorgias/index.html       |  80 [32m+++[m
+ tools/customer-support-ai/index.html               |  33 [32m+[m[31m-[m
+ tools/ecommerce-ai-tools/index.html                |  33 [32m+[m[31m-[m
+ tools/ecommerce-ai-tools/klaviyo/index.html        |  78 [32m++[m
+ tools/email-outreach-ai/index.html                 |  33 [32m+[m[31m-[m
+ tools/email-outreach-ai/instantly/index.html       |  79 [32m++[m
+ tools/sales-ai-tools/apollo/index.html             |   2 [32m+[m[31m-[m
+ tools/sales-ai-tools/clay/index.html               |   2 [32m+[m[31m-[m
+ tools/sales-ai-tools/gong/index.html               |   2 [32m+[m[31m-[m
+ tools/sales-ai-tools/index.html                    |   6 [32m+[m[31m-[m
+ 38 files changed, 1865 insertions(+), 534 deletions(-)

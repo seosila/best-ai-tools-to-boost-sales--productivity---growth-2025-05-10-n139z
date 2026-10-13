@@ -1,3 +1,5 @@
+@import url("site.css");
+
 .tool-logo-frame {
     display: inline-flex;
     width: 5rem;
@@ -7,9 +9,10 @@
     justify-content: center;
     overflow: hidden;
     padding: 0.5rem;
-    border: 1px solid #e5e7eb;
+    border: 1px solid #34405d;
     border-radius: 0.75rem;
-    background: #fff;
+    background: #f8f9fc;
+    box-shadow: 0 8px 22px rgb(0 0 0 / 20%);
 }
 
 .tool-logo-frame--profile {
@@ -29,7 +32,7 @@
 }
 
 .tool-logo-fallback {
-    color: #374151;
+    color: #26324a;
     font-size: 0.875rem;
     font-weight: 600;
     line-height: 1.25rem;
