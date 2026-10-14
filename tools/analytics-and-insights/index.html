@@ -1,20 +1,66 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analytics &amp; Insights Coming Soon | SellBetterAI</title>
-    <meta name="description" content="The Analytics and Insights category is not populated yet. Browse the SellBetterAI directory for available listings.">
-    <meta name="robots" content="noindex, follow">
+    <title>Analytics and Insights Tools: GA4, Mixpanel, Amplitude | SellBetterAI</title>
+    <meta name="description" content="Compare GA4, Mixpanel, and Amplitude for website and product analytics. Choose by measurement needs, event setup, reporting, and plan limits.">
+    <link rel="canonical" href="https://sellbetterai.com/tools/analytics-and-insights/">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../assets/css/tool-logos.css">
 </head>
 <body class="bg-gray-50 text-gray-900">
-    <main class="container mx-auto px-4 py-16 max-w-2xl">
-        <a href="../../tools.html" class="text-purple-700 hover:underline">SellBetterAI Directory</a>
-        <h1 class="text-3xl font-bold mt-8 mb-4">Analytics &amp; Insights</h1>
-        <p class="text-gray-700 mb-6">Coming soon. This category does not have any tool listings yet.</p>
-        <a href="../../tools.html" class="inline-block bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700">Back to the directory</a>
+    <main class="container mx-auto px-4 py-10 sm:py-14 max-w-4xl">
+        <nav aria-label="Breadcrumb" class="flex flex-wrap gap-2 text-sm mb-8">
+            <a href="../../index.html" class="text-purple-700 hover:underline">SellBetterAI</a>
+            <span aria-hidden="true">/</span>
+            <a href="../../tools.html" class="text-purple-700 hover:underline">Directory</a>
+            <span aria-hidden="true">/</span>
+            <span>Analytics and Insights</span>
+        </nav>
+        <header class="mb-8">
+            <p class="text-sm font-semibold uppercase tracking-wide text-purple-700">Business workflows</p>
+            <h1 class="text-3xl sm:text-4xl font-bold mt-2 mb-4">Analytics and Insights Tools</h1>
+            <p class="text-gray-700 leading-relaxed">Analytics products differ in what they measure and the questions they help answer. Google Analytics 4 is oriented toward website and app measurement, while Mixpanel and Amplitude emphasize event-based product behavior. Choose a tool around the decisions you need to make, not just the number of reports or AI features it advertises.</p>
+        </header>
+        <section aria-labelledby="profiles-heading" class="space-y-4">
+            <h2 id="profiles-heading" class="text-2xl font-semibold mb-4">Compare analytics platforms</h2>
+            <a href="google-analytics-4/" class="flex items-center gap-4 rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:border-purple-300">
+                <span class="tool-logo-frame" aria-hidden="true"><span class="tool-logo-fallback">GA4</span></span>
+                <span><strong class="block text-lg">Google Analytics 4</strong><span class="text-sm text-gray-600">Website and app measurement, acquisition, engagement, events, key events, and reporting.</span></span>
+                <span class="ml-auto text-purple-700" aria-hidden="true">→</span>
+            </a>
+            <a href="mixpanel/" class="flex items-center gap-4 rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:border-purple-300">
+                <span class="tool-logo-frame" aria-hidden="true"><span class="tool-logo-fallback">Mixpanel</span></span>
+                <span><strong class="block text-lg">Mixpanel</strong><span class="text-sm text-gray-600">Event-based product analytics for funnels, retention, segmentation, and user paths.</span></span>
+                <span class="ml-auto text-purple-700" aria-hidden="true">→</span>
+            </a>
+            <a href="amplitude/" class="flex items-center gap-4 rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:border-purple-300">
+                <span class="tool-logo-frame" aria-hidden="true"><span class="tool-logo-fallback">Amplitude</span></span>
+                <span><strong class="block text-lg">Amplitude</strong><span class="text-sm text-gray-600">Product analytics with event segmentation, funnels, retention, and AI-assisted exploration.</span></span>
+                <span class="ml-auto text-purple-700" aria-hidden="true">→</span>
+            </a>
+        </section>
+        <section class="mt-10">
+            <h2 class="text-2xl font-semibold mb-3">Start with the kind of question</h2>
+            <div class="space-y-4 text-gray-700 leading-relaxed">
+                <p><strong>Website analytics</strong> answers questions about traffic sources, landing pages, engagement, and conversions across websites and apps. GA4 is a natural starting point when acquisition reporting and general web/app measurement matter most. It can also analyze event paths, but requires a deliberate event design for business-specific behavior.</p>
+                <p><strong>Product analytics</strong> uses events and their properties to examine feature adoption, user journeys, funnels, cohorts, and retention. Mixpanel and Amplitude focus on this style of analysis. They overlap substantially; compare the event model, reports your team actually needs, data controls, integrations in your stack, and plan limits rather than assuming one is categorically more capable.</p>
+                <p><strong>AI-assisted insights</strong> can make it easier to explore instrumented data, build analyses, or summarize patterns. Treat generated interpretations as prompts for investigation: validate the underlying events, segments, definitions, and context before making a product or budget decision. AI cannot repair missing or inconsistent tracking.</p>
+            </div>
+        </section>
+        <section class="mt-10">
+            <h2 class="text-2xl font-semibold mb-3">Choose for your team and implementation</h2>
+            <ul class="list-disc pl-6 space-y-3 text-gray-700 leading-relaxed">
+                <li><strong>Content site or ecommerce:</strong> start with traffic acquisition, landing-page performance, and purchase or lead events. GA4 may cover broad measurement needs; a product analytics platform can add depth if you need behavior across logged-in journeys or product usage.</li>
+                <li><strong>SaaS product or app:</strong> consider Mixpanel or Amplitude when product questions depend on sequences of actions, adoption by cohort, or retention. GA4 may complement them for acquisition and broader site reporting; running two systems requires consistent definitions and data governance.</li>
+                <li><strong>Plan for instrumentation:</strong> all three require decisions about event names, identifiers, properties, consent, and what counts as a conversion. GA4 collects some events automatically in supported setups, but important business actions often need implementation and configuration; product analytics is only as useful as its event taxonomy and identity setup.</li>
+                <li><strong>Check traffic and volume:</strong> estimate monthly events/users and historical data needs against current free-plan allowances and paid tiers. Limits and included features can change, so use official pricing pages and confirm your workspace's entitlement before implementation.</li>
+                <li><strong>Review privacy and data quality:</strong> decide what personal data may be collected, how consent is handled in each region, retention needs, access controls, and whether your analytics setup reflects those requirements. No analytics product by itself establishes compliance.</li>
+            </ul>
+            <p class="text-gray-700 leading-relaxed mt-4">Analytics tools do not guarantee growth. Reliable decisions depend on correct measurement, adequate context, and follow-up—not simply installing a tag or dashboard. For campaign-page creation, also see <a class="text-purple-700 underline" href="../landing-page-builders/">Landing Page Builders</a>; for visitor behavior observation and experimentation, browse <a class="text-purple-700 underline" href="../conversion-optimization-cro/">Conversion Optimization (CRO)</a>.</p>
+        </section>
+        <p class="mt-8"><a href="../../tools.html" class="inline-block bg-purple-700 text-white px-5 py-3 rounded-lg hover:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-purple-500">Back to the directory</a></p>
     </main>
 </body>
 </html>
