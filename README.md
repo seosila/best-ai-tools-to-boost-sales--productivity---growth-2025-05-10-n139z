@@ -81,3 +81,7 @@ git diff
 `CNAME` contains `sellbetterai.com`, but that file alone does not identify the hosting provider or configure a complete deployment. No build manifest or GitHub Actions workflow is present in the repository; check the hosting service's settings before changing deployment configuration.
 
 The directory and search index are maintained in HTML by hand rather than generated from a database or content-management system. Product details, availability, and pricing can change, so verify them against official sources when adding or updating profiles. Logo source documentation records provenance and restrictions; inclusion in the repository does not establish permission to use a mark.
+
+## Category taxonomy
+
+`data/category-taxonomy.json` records the approved parent groups, display labels, existing category paths, and primary profile assignments. Keep this registry aligned with the static homepage and directory cards, category breadcrumbs, canonical URLs, and sitemap. Each profile should have one primary category; related links may cross-link to other relevant workflows. Do not promote empty categories or change existing profile URLs as part of taxonomy-only work.
