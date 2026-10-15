@@ -4,39 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Results | SellBetterAI</title>
-    <meta name="description" content="Search the limited SellBetterAI directory of AI tools.">
+    <meta name="description" content="Search SellBetterAI tool profiles by name, category, and business workflow.">
     <meta name="robots" content="noindex, follow">
     <link rel="canonical" href="https://sellbetterai.com/search.html">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/site.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <header class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
-        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="https://sellbetterai.com/" class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">SellBetterAI</a>
+<body class="sb-page">
+    <a class="sb-skip-link" href="#main-content">Skip to content</a>
+    <header class="sb-site-header">
+        <nav class="sb-nav sb-container" aria-label="Main navigation">
+            <a class="sb-brand" href="https://sellbetterai.com/" aria-label="SellBetterAI home">SellBetterAI</a>
+            <div class="sb-desktop-nav">
+                <a href="tools.html">AI Tools</a>
+                <a href="tools.html#sales">Sales</a>
+                <a href="tools.html#marketing">Marketing</a>
+                <a href="tools.html#ecommerce">Ecommerce</a>
+                <a href="blog/">Guides &amp; Insights</a>
+                <a class="sb-button sb-button--small" href="submit.html">Suggest a tool</a>
+            </div>
+            <button class="sb-menu-button" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+                <span class="sb-menu-icon" aria-hidden="true"></span>
+            </button>
+            <div class="sb-mobile-menu" id="mobile-menu" hidden>
+                <a href="tools.html">AI Tools</a>
+                <a href="tools.html#sales">Sales</a>
+                <a href="tools.html#marketing">Marketing</a>
+                <a href="tools.html#ecommerce">Ecommerce</a>
+                <a href="tools.html#other">Other categories</a>
+                <a href="blog/">Guides &amp; Insights</a>
+                <a href="submit.html">Suggest a tool</a>
+            </div>
         </nav>
     </header>
 
-    <main class="container mx-auto px-4 py-16">
-        <h1 class="text-3xl font-bold mb-6">Search Results</h1>
-        <p class="text-gray-600 mb-6">Search current tool profiles by name, category, or business workflow.</p>
-        <div id="search-results" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <main id="main-content" class="sb-directory-main">
+        <div class="sb-container">
+            <header class="sb-page-intro">
+                <p class="sb-eyebrow">SellBetterAI search</p>
+                <h1>Search AI tools</h1>
+                <p>Find current tool profiles by product name, category, or business workflow.</p>
+                <form action="search.html" method="get" class="sb-search-form" role="search">
+                    <label class="sb-sr-only" for="query">Search AI tools by name, category, or business workflow</label>
+                    <input id="query" name="query" type="search" placeholder="Try CRM, SEO, email outreach, analytics..." autocomplete="off">
+                    <button class="sb-button" type="submit">Search tools</button>
+                </form>
+            </header>
+            <div id="search-results" class="sb-tool-grid">
+            </div>
+            <p id="search-status" class="sb-search-note" role="status" aria-live="polite"></p>
+            <p class="mt-8"><a href="tools.html" class="sb-text-link">Browse all AI tools</a></p>
         </div>
-        <p id="search-status" class="mt-6 text-gray-600" role="status" aria-live="polite"></p>
-        <p class="mt-8"><a href="tools.html" class="text-purple-700 hover:underline">Browse the directory</a></p>
     </main>
 
-    <footer class="bg-gray-900 text-gray-300 py-12">
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2026 SellBetterAI. All rights reserved.</p>
+    <footer class="sb-footer">
+        <div class="sb-container">
+            <div class="sb-footer__main">
+                <div class="sb-footer__brand">
+                    <a class="sb-brand sb-brand--footer" href="https://sellbetterai.com/">SellBetterAI</a>
+                    <p>A growing directory focused on AI tools for sales, marketing, and ecommerce.</p>
+                    <p>Email: <a href="mailto:seosila8@gmail.com">seosila8@gmail.com</a></p>
+                </div>
+                <nav aria-label="Directory navigation">
+                    <h2>Explore</h2>
+                    <a href="tools.html">AI Tools</a>
+                    <a href="tools/sales-ai-tools/">Sales AI Tools</a>
+                    <a href="tools/ai-crms-and-assistants/">AI CRMs and Assistants</a>
+                    <a href="tools/chatbots-and-virtual-agents/">Chatbots and Virtual Agents</a>
+                    <a href="submit.html">Suggest a tool</a>
+                </nav>
+                <nav aria-label="About and legal">
+                    <h2>About SellBetterAI</h2>
+                    <a href="about.html">About</a>
+                    <a href="how-we-choose-tools.html">How We Choose Tools</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="privacy.html">Privacy</a>
+                    <a href="terms.html">Terms</a>
+                </nav>
+            </div>
+            <div class="sb-footer__bottom">
+                <span>SellBetterAI</span>
+                <a href="#main-content">Back to top ↑</a>
+            </div>
         </div>
     </footer>
+    <script src="/assets/js/site-nav.js" defer></script>
 
     <script>
         const query = new URLSearchParams(window.location.search).get('query') || '';
         const resultsContainer = document.getElementById('search-results');
         const status = document.getElementById('search-status');
+        const searchInput = document.getElementById('query');
+        searchInput.value = query;
         const normalizedTerms = query.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
         const tools = [
             {
@@ -323,22 +383,22 @@
 
                 matches.forEach((tool) => {
                     const card = document.createElement('article');
-                    card.className = 'bg-white rounded-xl shadow-lg border border-gray-100 p-6';
+                    card.className = 'sb-tool-card';
 
                     const category = document.createElement('p');
-                    category.className = 'text-sm text-purple-700 font-medium mb-2';
+                    category.className = 'sb-card-category';
                     category.textContent = tool.category;
 
                     const heading = document.createElement('h2');
-                    heading.className = 'text-xl font-semibold mb-2';
+                    heading.className = 'text-xl font-semibold';
                     heading.textContent = tool.name;
 
                     const description = document.createElement('p');
-                    description.className = 'text-gray-600 mb-4';
+                    description.className = 'mb-4';
                     description.textContent = tool.description;
 
                     const link = document.createElement('a');
-                    link.className = 'inline-block bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2';
+                    link.className = 'sb-card-link';
                     link.href = tool.url;
                     link.textContent = `View ${tool.name} profile`;
 
