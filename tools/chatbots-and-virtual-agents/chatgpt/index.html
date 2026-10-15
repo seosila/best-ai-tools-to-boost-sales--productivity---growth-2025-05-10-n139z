@@ -10,31 +10,12 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="../../../assets/css/tool-logos.css">
+    <link rel="stylesheet" href="/assets/css/site.css">
 </head>
-<body class="bg-gray-50">
+<body class="sb-page">
+<a class="sb-skip-link" href="#main-content">Skip to content</a><header class="sb-site-header"><nav class="sb-nav sb-container" aria-label="Main navigation"><a class="sb-brand" href="/" aria-label="SellBetterAI home">SellBetterAI</a><div class="sb-desktop-nav"><a href="/tools.html">AI Tools</a><a href="/tools.html#sales">Sales</a><a href="/tools.html#marketing">Marketing</a><a href="/tools.html#ecommerce">Ecommerce</a><a href="/blog/">Guides &amp; Insights</a><a class="sb-button sb-button--small" href="/submit.html">Suggest a tool</a></div><button class="sb-menu-button" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"><span class="sb-menu-icon" aria-hidden="true"></span></button><div class="sb-mobile-menu" id="mobile-menu" hidden><a href="/tools.html">AI Tools</a><a href="/tools.html#sales">Sales</a><a href="/tools.html#marketing">Marketing</a><a href="/tools.html#ecommerce">Ecommerce</a><a href="/blog/">Guides &amp; Insights</a><a href="/submit.html">Suggest a tool</a></div></nav></header>
 
-  <!-- Header -->
-  <header class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
-    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="https://sellbetterai.com/" class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">SellBetterAI</a>
-      <button class="mobile-menu-button md:hidden p-2" aria-label="Toggle menu">
-        <i class="fas fa-bars text-2xl"></i>
-      </button>
-      <div class="hidden md:flex space-x-8">
-        <a href="../../../tools.html" class="text-gray-600 hover:text-gray-900 transition-colors">Directory</a>
-        <a href="../../../submit.html" class="text-gray-600 hover:text-gray-900 transition-colors">Submit a Tool</a>
-      </div>
-      <div class="mobile-menu hidden md:hidden absolute top-full left-0 w-full bg-white border-b border-gray-100">
-        <div class="flex flex-col space-y-4 p-4">
-          <a href="../../../tools.html" class="text-gray-600 hover:text-gray-900 transition-colors">Directory</a>
-          <a href="../../../submit.html" class="text-gray-600 hover:text-gray-900 transition-colors">Submit a Tool</a>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Main Content -->
-  <main class="container mx-auto px-4 pt-24 pb-12 max-w-4xl">
+  <main id="main-content" class="container mx-auto px-4 pt-24 pb-12 max-w-4xl">
     <nav aria-label="Breadcrumb" class="flex flex-wrap gap-2 text-sm mb-8">
       <a href="../../../index.html" class="text-purple-700 hover:underline">SellBetterAI</a>
       <span aria-hidden="true">/</span>
@@ -100,68 +81,10 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-300 py-12">
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
-          <h3 class="text-white font-semibold mb-4">Contact</h3>
-          <p class="mb-2">Email: <a href="mailto:seosila8@gmail.com" class="hover:text-white underline">seosila8@gmail.com</a></p>
-        </div>
-        <div>
-          <h3 class="text-white font-semibold mb-4">Quick Links</h3>
-          <ul class="space-y-2">
-            <li><a href="https://sellbetterai.com/" class="hover:text-white transition-colors">Home</a></li>
-            <li><a href="../../../tools.html" class="hover:text-white transition-colors">Directory</a></li>
-            <li><a href="../../../submit.html" class="hover:text-white transition-colors">Suggest a Tool</a></li>
-            <li><a href="../../../about.html" class="hover:text-white transition-colors">About</a></li>
-            <li><a href="../../../how-we-choose-tools.html" class="hover:text-white transition-colors">How We Choose Tools</a></li>
-            <li><a href="../../../contact.html" class="hover:text-white transition-colors">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-white font-semibold mb-4">Legal</h3>
-          <ul class="space-y-2">
-            <li><a href="../../../privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
-            <li><a href="../../../terms.html" class="hover:text-white transition-colors">Terms of Use</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-        <p>&copy; 2025 SellBetterAI. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+  
 
   <!-- Mobile menu toggle -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
-      const mobileMenu = document.querySelector('header nav .mobile-menu');
-
-      if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener('click', () => {
-          mobileMenu.classList.toggle('hidden');
-          const icon = mobileMenuButton.querySelector('i');
-          if (icon) {
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times');
-          }
-        });
-
-        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-        mobileMenuLinks.forEach(link => {
-          link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-            const icon = mobileMenuButton.querySelector('i');
-            if (icon) {
-              icon.classList.remove('fa-times');
-              icon.classList.add('fa-bars');
-            }
-          });
-        });
-      }
-
-    });
-  </script>
+  
+<footer class="sb-footer"><div class="sb-container"><div class="sb-footer__main"><div class="sb-footer__brand"><a class="sb-brand sb-brand--footer" href="/">SellBetterAI</a><p>A practical directory of AI tools for sales, marketing, and ecommerce workflows.</p><p>Email: <a href="mailto:seosila8@gmail.com">seosila8@gmail.com</a></p></div><nav aria-label="Directory navigation"><h2>Explore</h2><a href="/tools.html">AI Tools</a><a href="/tools/sales-ai-tools/">Sales AI Tools</a><a href="/tools/ai-crms-and-assistants/">AI CRMs and Assistants</a><a href="/tools/chatbots-and-virtual-agents/">Chatbots and Virtual Agents</a><a href="/submit.html">Suggest a tool</a></nav><nav aria-label="About and legal"><h2>About SellBetterAI</h2><a href="/about.html">About</a><a href="/how-we-choose-tools.html">How We Choose Tools</a><a href="/contact.html">Contact</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></nav></div><div class="sb-footer__bottom"><span>SellBetterAI</span><a href="#main-content">Back to top ↑</a></div></div></footer><script src="/assets/js/site-nav.js" defer></script>
 </body>
 </html>
