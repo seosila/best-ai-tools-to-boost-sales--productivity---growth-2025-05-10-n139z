@@ -53,7 +53,7 @@
             </header>
             <div id="search-results" class="sb-tool-grid">
             </div>
-            <p id="search-status" class="mt-6 text-gray-600" role="status" aria-live="polite"></p>
+            <p id="search-status" class="sb-search-note" role="status" aria-live="polite"></p>
             <p class="mt-8"><a href="tools.html" class="sb-text-link">Browse all AI tools</a></p>
         </div>
     </main>
@@ -95,6 +95,8 @@
         const query = new URLSearchParams(window.location.search).get('query') || '';
         const resultsContainer = document.getElementById('search-results');
         const status = document.getElementById('search-status');
+        const searchInput = document.getElementById('query');
+        searchInput.value = query;
         const normalizedTerms = query.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
         const tools = [
             {
