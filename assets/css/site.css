@@ -1134,3 +1134,84 @@ body:not(.sb-page) main td {
         transition-duration: 0.01ms !important;
     }
 }
+
+
+/* Readable dark surfaces for tool profiles using the shared site shell. */
+body.sb-page main > article {
+    border: 1px solid #29344f;
+    background:
+        radial-gradient(ellipse at 95% 0%, rgb(97 74 208 / 10%), transparent 28rem),
+        linear-gradient(150deg, #11192c, #0b1120) !important;
+    color: #eef2ff !important;
+    box-shadow: 0 24px 60px rgb(0 0 0 / 30%);
+}
+
+body.sb-page main > article > header h1 {
+    color: #f8f8ff !important;
+    background: linear-gradient(100deg, #fff 24%, #c4b8ff 62%, #81e4f7);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.sb-page main > article h2,
+body.sb-page main > article h3 {
+    color: #ded7ff !important;
+}
+
+body.sb-page main > article p,
+body.sb-page main > article li,
+body.sb-page main > article td {
+    color: #bdc8df;
+}
+
+body.sb-page main > article .text-gray-900,
+body.sb-page main > article .text-gray-800 {
+    color: #eff2ff !important;
+}
+
+body.sb-page main > article .text-gray-700,
+body.sb-page main > article .text-gray-600,
+body.sb-page main > article .text-gray-500 {
+    color: #bdc8df !important;
+}
+
+body.sb-page main > article > section {
+    padding: 1.15rem 1.25rem;
+    border: 1px solid rgb(140 158 204 / 14%);
+    border-radius: 0.9rem;
+    background: rgb(17 25 43 / 62%);
+}
+
+body.sb-page main > article > aside,
+body.sb-page main > article aside.rounded-lg {
+    border: 1px solid rgb(139 114 255 / 26%);
+    background: linear-gradient(110deg, rgb(92 66 169 / 20%), rgb(27 75 111 / 18%)) !important;
+    color: #d3d9ec !important;
+}
+
+body.sb-page main > article .border-gray-100,
+body.sb-page main > article .border-gray-200 {
+    border-color: #2b3651 !important;
+}
+
+body.sb-page main > article .bg-gray-50,
+body.sb-page main > article .bg-gray-100,
+body.sb-page main > article .bg-purple-50 {
+    background-color: #121a2d !important;
+}
+
+body.sb-page main > article a.text-purple-700,
+body.sb-page main > article a.text-purple-600 {
+    color: #b7a5ff !important;
+}
+
+body.sb-page main > article a.bg-purple-700,
+body.sb-page main > article a.bg-purple-600 {
+    color: #fff !important;
+}
+
+@media (max-width: 650px) {
+    body.sb-page main > article > section {
+        padding: 1rem;
+    }
+}
