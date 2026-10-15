@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Editorial source of truth for the public directory hierarchy. Keep parent groups, display labels, canonical category paths, and profile assignments aligned with homepage, tools.html, category breadcrumbs, and sitemap.",
+  "urlPolicy": "Preserve existing published category and tool-profile URLs. Taxonomy labels may change without moving URLs. Do not promote empty or noindex categories.",
+  "groups": [
+    {
+      "id": "sales",
+      "label": "Sales AI",
+      "anchor": "sales",
+      "categories": [
+        {
+          "id": "sales-intelligence",
+          "label": "Sales Intelligence & Enablement",
+          "path": "/tools/sales-ai-tools/",
+          "primaryProfiles": [
+            "apollo",
+            "clay",
+            "gong",
+            "lusha",
+            "avoma",
+            "lavender"
+          ]
+        },
+        {
+          "id": "crm-sales-automation",
+          "label": "CRM & Sales Automation",
+          "path": "/tools/ai-crms-and-assistants/",
+          "primaryProfiles": [
+            "hubspot-sales-hub",
+            "salesforce-sales-cloud"
+          ]
+        },
+        {
+          "id": "email-outreach",
+          "label": "Email Outreach & Sales Engagement",
+          "path": "/tools/email-outreach-ai/",
+          "primaryProfiles": [
+            "instantly",
+            "smartlead",
+            "lemlist",
+            "woodpecker"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "marketing",
+      "label": "Marketing AI",
+      "anchor": "marketing",
+      "categories": [
+        {
+          "id": "content-copywriting",
+          "label": "Content & Copywriting",
+          "path": "/tools/content-and-copywriting-ai/",
+          "primaryProfiles": [
+            "jasper",
+            "copy-ai"
+          ]
+        },
+        {
+          "id": "advertising-creative",
+          "label": "Advertising & Creative Production",
+          "path": "/tools/ad-copy-and-creatives-generators/",
+          "primaryProfiles": [
+            "adcreative-ai",
+            "canva-magic-studio"
+          ]
+        },
+        {
+          "id": "social-media",
+          "label": "Social Media Marketing",
+          "path": "/tools/social-media-ai-tools/",
+          "primaryProfiles": [
+            "predis-ai",
+            "buffer",
+            "metricool"
+          ]
+        },
+        {
+          "id": "seo-organic-search",
+          "label": "SEO & Organic Search",
+          "path": "/tools/seo-ai-tools/",
+          "primaryProfiles": [
+            "semrush",
+            "surfer-seo",
+            "screaming-frog-seo-spider"
+          ]
+        },
+        {
+          "id": "landing-pages",
+          "label": "Landing Pages & Lead Generation",
+          "path": "/tools/landing-page-builders/",
+          "primaryProfiles": [
+            "unbounce",
+            "instapage",
+            "leadpages"
+          ]
+        },
+        {
+          "id": "video-multimedia",
+          "label": "Video & Multimedia Marketing",
+          "path": "/tools/video-ai-tools/",
+          "primaryProfiles": [
+            "runway",
+            "descript"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ecommerce",
+      "label": "Ecommerce AI",
+      "anchor": "ecommerce",
+      "categories": [
+        {
+          "id": "store-operations-retention",
+          "label": "Store Operations & Customer Retention",
+          "path": "/tools/ecommerce-ai-tools/",
+          "primaryProfiles": [
+            "shopify-sidekick",
+            "klaviyo",
+            "rebuy",
+            "prisync"
+          ]
+        },
+        {
+          "id": "pricing-revenue",
+          "label": "Pricing & Revenue Optimization",
+          "path": "/tools/pricing-and-revenue-optimization/",
+          "primaryProfiles": [
+            "omnia-retail",
+            "competera"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cross-functional",
+      "label": "Cross-functional AI capabilities",
+      "anchor": "cross-functional",
+      "categories": [
+        {
+          "id": "customer-support",
+          "label": "Customer Support & Service",
+          "path": "/tools/customer-support-ai/",
+          "primaryProfiles": [
+            "gorgias",
+            "tidio",
+            "intercom-fin",
+            "freshdesk"
+          ]
+        },
+        {
+          "id": "analytics-bi",
+          "label": "Analytics & Business Intelligence",
+          "path": "/tools/analytics-and-insights/",
+          "primaryProfiles": [
+            "google-analytics-4",
+            "mixpanel",
+            "amplitude"
+          ]
+        },
+        {
+          "id": "cro-experimentation",
+          "label": "Conversion Optimization & Experimentation",
+          "path": "/tools/conversion-optimization-cro/",
+          "primaryProfiles": [
+            "clarity",
+            "hotjar",
+            "vwo"
+          ]
+        },
+        {
+          "id": "business-assistants",
+          "label": "AI Assistants for Business Work",
+          "path": "/tools/chatbots-and-virtual-agents/",
+          "primaryProfiles": [
+            "chatgpt"
+          ]
+        }
+      ]
+    }
+  ],
+  "unlistedUntilReady": [
+    {
+      "path": "/tools/voice-ai-tools/",
+      "reason": "No published tool profiles; currently noindex."
+    },
+    {
+      "path": "/tools/affiliate-marketing-ai/",
+      "reason": "No published tool profiles; currently noindex."
+    }
+  ]
+}
