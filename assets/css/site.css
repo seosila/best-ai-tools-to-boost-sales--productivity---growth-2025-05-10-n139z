@@ -706,6 +706,29 @@ body.sb-page {
     overflow-wrap: anywhere;
 }
 
+.sb-workflow-groups {
+    display: grid;
+    gap: 1.1rem;
+}
+
+.sb-workflow-group {
+    padding: 1.15rem;
+    border: 1px solid var(--sb-line);
+    border-radius: 0.9rem;
+    background: #0d1425;
+}
+
+.sb-workflow-group h3 {
+    margin: 0 0 0.85rem;
+    color: #d8def0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.sb-workflow-group .sb-planned-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .sb-planned-group {
     margin-top: 1.75rem;
     padding: 1.15rem;
@@ -788,12 +811,12 @@ body.sb-page {
     border-left: 2px solid rgb(239 104 150 / 62%);
 }
 
-.sb-directory-section#other .sb-section-heading .sb-eyebrow,
-.sb-directory-section#other .sb-section-heading h2 {
+.sb-directory-section#cross-functional .sb-section-heading .sb-eyebrow,
+.sb-directory-section#cross-functional .sb-section-heading h2 {
     color: #65e4d5;
 }
 
-.sb-directory-section#other .sb-planned-card {
+.sb-directory-section#cross-functional .sb-category-card {
     border-left: 2px solid rgb(53 197 185 / 56%);
 }
 
