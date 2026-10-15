@@ -92,11 +92,31 @@ body.sb-page {
 }
 
 .sb-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     color: #f7f7ff !important;
     font-size: 1.3rem;
     font-weight: 800;
     letter-spacing: -0.045em;
     text-decoration: none;
+}
+
+.sb-brand::before {
+    content: "↗";
+    display: inline-grid;
+    width: 1.35rem;
+    height: 1.35rem;
+    flex: 0 0 auto;
+    place-items: center;
+    border: 1px solid rgb(255 255 255 / 20%);
+    border-radius: 0.4rem;
+    background: linear-gradient(135deg, #a78bfa, #67e8f9);
+    color: #111827;
+    font-size: 0.88rem;
+    font-weight: 900;
+    letter-spacing: 0;
+    line-height: 1;
 }
 
 .sb-desktop-nav {
