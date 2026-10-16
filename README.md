@@ -57,6 +57,18 @@ There is no automated test command configured in the repository. For manual chec
 
 Also update any manually maintained counts or links in `index.html` and `tools.html` when the new listing changes them.
 
+## Tool profile layout rule
+
+**Required for every file at `tools/<category>/<tool>/index.html`: all tool profiles must use the same shared visual template.** Tool-specific facts and section copy may differ, but the page shell, spacing, card treatment, typography, breadcrumb, logo frame, and brand palette must not drift between profiles.
+
+- Use `body.sb-page`, the shared `sb-site-header` and `sb-footer`, the skip link, and the shared navigation script.
+- Use the same main container: `container mx-auto px-4 py-10 sm:py-14 max-w-4xl`.
+- Use the same profile card: `bg-white rounded-xl shadow-sm p-6 sm:p-8 space-y-8`.
+- Keep one H1 with `text-3xl sm:text-4xl font-bold mb-4`, the shared breadcrumb styling, and the `tool-logo-frame tool-logo-frame--profile mb-4` logo/fallback component.
+- Use the established purple/gray palette and shared button styles. Do not introduce per-tool color themes, alternate card shadows, one-off spacing, inline styles, or page-specific CSS.
+- A change to shared profile layout or styling must be applied consistently to all profiles in the same change. Preserve each profile's URL, canonical, robots/indexation, title, description, breadcrumb destinations, substantive copy, and vendor logo/assets unless a separate approved task explicitly calls for a change.
+- Before opening a PR that adds or changes profiles, run `python scripts/check_tool_profile_consistency.py`. The check is intended to catch layout drift early.
+
 ## SEO and indexing
 
 - Public page canonicals use `https://sellbetterai.com/`; preserve each page's canonical URL when editing its content.
