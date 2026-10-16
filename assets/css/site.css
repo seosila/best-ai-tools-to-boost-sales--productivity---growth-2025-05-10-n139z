@@ -1365,3 +1365,75 @@ body.sb-category-page main#main-content a.text-purple-600 { color: #b9a6ff; }
   body.sb-category-page main#main-content section[aria-labelledby*="tools"] > a,
   body.sb-category-page main#main-content section[aria-labelledby*="options"] > a { min-height: 0; }
 }
+
+
+/* Refine listing cards: grid belongs to the card container, not the whole section. */
+body.sb-category-page main#main-content section[aria-labelledby*="listings"],
+body.sb-category-page main#main-content section[aria-labelledby*="profiles"],
+body.sb-category-page main#main-content section[aria-labelledby*="tools"],
+body.sb-category-page main#main-content section[aria-labelledby*="options"] {
+  display: block;
+}
+body.sb-category-page main#main-content section[aria-labelledby*="listings"] > div,
+body.sb-category-page main#main-content section[aria-labelledby*="profiles"] > div,
+body.sb-category-page main#main-content section[aria-labelledby*="tools"] > div,
+body.sb-category-page main#main-content section[aria-labelledby*="options"] > div {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+body.sb-category-page main#main-content section[aria-labelledby*="listings"] > a,
+body.sb-category-page main#main-content section[aria-labelledby*="profiles"] > a,
+body.sb-category-page main#main-content section[aria-labelledby*="tools"] > a,
+body.sb-category-page main#main-content section[aria-labelledby*="options"] > a {
+  margin: 0;
+}
+body.sb-category-page main#main-content section[aria-labelledby*="listings"] > div > a,
+body.sb-category-page main#main-content section[aria-labelledby*="profiles"] > div > a,
+body.sb-category-page main#main-content section[aria-labelledby*="tools"] > div > a,
+body.sb-category-page main#main-content section[aria-labelledby*="options"] > div > a {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  min-height: 12rem;
+  margin: 0;
+  padding: 1.1rem;
+  border: 1px solid #293653;
+  border-radius: .85rem;
+  background: linear-gradient(145deg, #121c31, #0e1628);
+  box-shadow: none;
+  text-decoration: none;
+}
+body.sb-category-page main#main-content section[aria-labelledby*="listings"] > div > article,
+body.sb-category-page main#main-content section[aria-labelledby*="profiles"] > div > article,
+body.sb-category-page main#main-content section[aria-labelledby*="tools"] > div > article,
+body.sb-category-page main#main-content section[aria-labelledby*="options"] > div > article {
+  min-width: 0;
+  border: 1px solid #293653;
+  border-radius: .85rem;
+  background: linear-gradient(145deg, #121c31, #0e1628);
+  box-shadow: none;
+}
+@media (max-width: 900px) {
+  body.sb-category-page main#main-content section[aria-labelledby*="listings"] > div,
+  body.sb-category-page main#main-content section[aria-labelledby*="profiles"] > div,
+  body.sb-category-page main#main-content section[aria-labelledby*="tools"] > div,
+  body.sb-category-page main#main-content section[aria-labelledby*="options"] > div {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  body.sb-category-page main#main-content section[aria-labelledby*="listings"] > div,
+  body.sb-category-page main#main-content section[aria-labelledby*="profiles"] > div,
+  body.sb-category-page main#main-content section[aria-labelledby*="tools"] > div,
+  body.sb-category-page main#main-content section[aria-labelledby*="options"] > div {
+    grid-template-columns: 1fr;
+  }
+  body.sb-category-page main#main-content section[aria-labelledby*="listings"] > div > a,
+  body.sb-category-page main#main-content section[aria-labelledby*="profiles"] > div > a,
+  body.sb-category-page main#main-content section[aria-labelledby*="tools"] > div > a,
+  body.sb-category-page main#main-content section[aria-labelledby*="options"] > div > a {
+    min-height: 0;
+  }
+}
