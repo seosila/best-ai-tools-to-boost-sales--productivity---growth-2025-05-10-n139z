@@ -109,3 +109,8 @@ The directory and search index are maintained in HTML by hand rather than genera
 ## Category taxonomy
 
 `data/category-taxonomy.json` records the approved parent groups, display labels, existing category paths, and primary profile assignments. Keep this registry aligned with the static homepage and directory cards, category breadcrumbs, canonical URLs, and sitemap. Each profile should have one primary category; related links may cross-link to other relevant workflows. Do not promote empty categories or change existing profile URLs as part of taxonomy-only work.
+
+
+## Category page layout rule
+
+Category pages should use one directory-first sequence: breadcrumb and concise introduction, tool listings, then workflow guidance, comparisons, buying advice, and related resources. Tool listings use consistent card surfaces and a responsive three-column desktop, two-column tablet, and one-column mobile grid. Keep category-specific editorial content and comparison tables where useful, but do not place long guidance sections before primary tool listings. Empty categories remain clearly marked as coming soon and do not gain fabricated listings. Preserve canonical URLs, titles, descriptions, robots directives, structured metadata, profile URLs, and sitemap behavior when updating layouts.
