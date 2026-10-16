@@ -1258,3 +1258,110 @@ body.sb-page main > article a.bg-purple-600 {
         padding: 1rem;
     }
 }
+
+
+/* Shared category-directory cards and responsive grid. */
+body.sb-category-page main#main-content {
+  width: min(100% - 2rem, 56rem);
+  max-width: 56rem;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  color: #e6edff;
+}
+body.sb-category-page main#main-content > header { margin-bottom: 2rem; }
+body.sb-category-page main#main-content h1 { color: #f7f8ff; letter-spacing: -.025em; }
+body.sb-category-page main#main-content h2,
+body.sb-category-page main#main-content h3 { color: #f0edff; }
+body.sb-category-page main#main-content p,
+body.sb-category-page main#main-content li,
+body.sb-category-page main#main-content td { color: #bdc8df; }
+
+/* Listing sections currently use several aria-labelledby values; normalize their layout. */
+body.sb-category-page main#main-content section[aria-labelledby*="listings"],
+body.sb-category-page main#main-content section[aria-labelledby*="profiles"],
+body.sb-category-page main#main-content section[aria-labelledby*="tools"],
+body.sb-category-page main#main-content section[aria-labelledby*="options"] {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-block: 0 2.5rem;
+}
+body.sb-category-page main#main-content section[aria-labelledby*="listings"] > h2,
+body.sb-category-page main#main-content section[aria-labelledby*="profiles"] > h2,
+body.sb-category-page main#main-content section[aria-labelledby*="tools"] > h2,
+body.sb-category-page main#main-content section[aria-labelledby*="options"] > h2 {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+}
+body.sb-category-page main#main-content section[aria-labelledby*="listings"] > a,
+body.sb-category-page main#main-content section[aria-labelledby*="profiles"] > a,
+body.sb-category-page main#main-content section[aria-labelledby*="tools"] > a,
+body.sb-category-page main#main-content section[aria-labelledby*="options"] > a {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .8rem;
+  min-width: 0;
+  min-height: 12rem;
+  padding: 1.1rem;
+  border: 1px solid #293653;
+  border-radius: .85rem;
+  background: linear-gradient(145deg, #121c31, #0e1628);
+  box-shadow: none;
+  color: #f0edff;
+  text-decoration: none;
+  transition: border-color .18s ease, transform .18s ease;
+}
+body.sb-category-page main#main-content section[aria-labelledby*="listings"] > a:hover,
+body.sb-category-page main#main-content section[aria-labelledby*="profiles"] > a:hover,
+body.sb-category-page main#main-content section[aria-labelledby*="tools"] > a:hover,
+body.sb-category-page main#main-content section[aria-labelledby*="options"] > a:hover {
+  border-color: #8870ff;
+  transform: translateY(-2px);
+}
+body.sb-category-page main#main-content section[aria-labelledby*="listings"] > a strong,
+body.sb-category-page main#main-content section[aria-labelledby*="profiles"] > a strong,
+body.sb-category-page main#main-content section[aria-labelledby*="tools"] > a strong,
+body.sb-category-page main#main-content section[aria-labelledby*="options"] > a strong {
+  display: block;
+  margin-bottom: .35rem;
+  color: #f7f8ff;
+}
+body.sb-category-page main#main-content section[aria-labelledby*="listings"] .tool-logo-frame,
+body.sb-category-page main#main-content section[aria-labelledby*="profiles"] .tool-logo-frame,
+body.sb-category-page main#main-content section[aria-labelledby*="tools"] .tool-logo-frame,
+body.sb-category-page main#main-content section[aria-labelledby*="options"] .tool-logo-frame {
+  width: 3.5rem;
+  height: 3.5rem;
+  flex: 0 0 3.5rem;
+  border-radius: .65rem;
+}
+body.sb-category-page main#main-content .rounded-xl.border,
+body.sb-category-page main#main-content .rounded-xl.bg-gray-50 {
+  border-color: #293653;
+  background: #111a2d;
+  box-shadow: none;
+}
+body.sb-category-page main#main-content a.text-purple-700,
+body.sb-category-page main#main-content a.text-purple-600 { color: #b9a6ff; }
+@media (max-width: 900px) {
+  body.sb-category-page main#main-content section[aria-labelledby*="listings"],
+  body.sb-category-page main#main-content section[aria-labelledby*="profiles"],
+  body.sb-category-page main#main-content section[aria-labelledby*="tools"],
+  body.sb-category-page main#main-content section[aria-labelledby*="options"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  body.sb-category-page main#main-content { width: min(100% - 1.5rem, 56rem); padding-top: 1.5rem; }
+  body.sb-category-page main#main-content section[aria-labelledby*="listings"],
+  body.sb-category-page main#main-content section[aria-labelledby*="profiles"],
+  body.sb-category-page main#main-content section[aria-labelledby*="tools"],
+  body.sb-category-page main#main-content section[aria-labelledby*="options"] {
+    grid-template-columns: 1fr;
+  }
+  body.sb-category-page main#main-content section[aria-labelledby*="listings"] > a,
+  body.sb-category-page main#main-content section[aria-labelledby*="profiles"] > a,
+  body.sb-category-page main#main-content section[aria-labelledby*="tools"] > a,
+  body.sb-category-page main#main-content section[aria-labelledby*="options"] > a { min-height: 0; }
+}
