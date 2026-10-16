@@ -35,6 +35,6 @@ for page in pages:
 
 print(f"Checked {checked} category pages.")
 if errors:
-    print("\\n".join(errors))
+    print("\n".join(errors))
     sys.exit(1)
 print("Category layout guardrails passed.")
