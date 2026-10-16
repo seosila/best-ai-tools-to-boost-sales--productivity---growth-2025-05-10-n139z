@@ -69,6 +69,18 @@ Also update any manually maintained counts or links in `index.html` and `tools.h
 - A change to shared profile layout or styling must be applied consistently to all profiles in the same change. Preserve each profile's URL, canonical, robots/indexation, title, description, breadcrumb destinations, substantive copy, and vendor logo/assets unless a separate approved task explicitly calls for a change.
 - Before opening a PR that adds or changes profiles, run `python scripts/check_tool_profile_consistency.py`. The check is intended to catch layout drift early.
 
+## Category page layout rule
+
+**Required for every file at `tools/<category>/index.html`: all category pages must use the same shared visual shell and component styling.** Category-specific information, comparison tables, tool counts, and editorial sections may differ, but the header, page width and spacing, breadcrumb, title/intro typography, cards, borders, shadows, buttons, and brand palette must remain consistent.
+
+- Use `body.sb-category-page`, the shared `sb-site-header` and `sb-footer`, the skip link, shared site CSS, and the shared navigation script.
+- Use the same main container: `container mx-auto px-4 py-10 sm:py-14 max-w-5xl`.
+- Use the same breadcrumb class: `flex flex-wrap gap-2 text-sm mb-8`; use one H1 with `text-3xl sm:text-4xl font-bold mt-2 mb-4` and a consistent category header spacing of `mb-10`.
+- Use neutral gray borders and surfaces for cards and callouts, the shared purple accent for links and actions, and the shared `.sb-button` style for primary actions. Avoid category-specific color themes, one-off widths, spacing, shadows, or button treatments.
+- Coming-soon categories use the same shell and breadcrumb/header layout, but remain clearly marked as coming soon and keep their existing `noindex, follow` directive until useful listings are added.
+- Preserve each category's URL, canonical, title, description, Open Graph/Twitter metadata, robots/indexation directive, breadcrumb destinations, substantive copy, tool links, and listing assets. Do not add or remove sitemap entries as part of a visual consistency change.
+- Before opening a PR that adds or changes category pages, run `python scripts/check_category_page_consistency.py`.
+
 ## SEO and indexing
 
 - Public page canonicals use `https://sellbetterai.com/`; preserve each page's canonical URL when editing its content.
