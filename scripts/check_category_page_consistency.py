@@ -39,24 +39,17 @@ for path in PAGES:
         if snippet not in html:
             errors.append(f"{relative}: missing standard {label}")
 
-    for label, pattern in (
-        ("title", r"<title\b"),
-        ("description", r'<meta[^>]+name="description"'),
-        ("canonical", r'<link[^>]+rel="canonical"'),
-        ("H1", r"<h1\b"),
+    for label, count in (
+        ("title", html.lower().count("<title>")),
+        ("description", html.lower().count('<meta name="description"')),
+        ("canonical", html.lower().count('<link rel="canonical"')),
+        ("H1", html.lower().count("<h1 ")),
+        ("breadcrumb", html.count('aria-label="Breadcrumb"')),
+        ("shared footer", html.count('<footer class="sb-footer"')),
+        ("skip link", html.count('class="sb-skip-link"')),
+        ("site stylesheet", html.count('href="/assets/css/site.css"')),
+        ("navigation script", html.count('src="/assets/js/site-nav.js"')),
     ):
-        count = len(re.findall(pattern, html, flags=re.IGNORECASE))
-        if count != 1:
-            errors.append(f"{relative}: expected exactly one {label}, found {count}")
-
-    for label, pattern in (
-        ("breadcrumb", r'aria-label="Breadcrumb"'),
-        ("shared footer", r'<footer[^>]+class="sb-footer'),
-        ("skip link", r'class="sb-skip-link"'),
-        ("site stylesheet", r'href="/assets/css/site\.css"'),
-        ("navigation script", r'src="/assets/js/site-nav\.js"'),
-    ):
-        count = len(re.findall(pattern, html, flags=re.IGNORECASE))
         if count != 1:
             errors.append(f"{relative}: expected exactly one {label}, found {count}")
 
@@ -65,7 +58,7 @@ for path in PAGES:
     for token in sorted(tokens & DISALLOWED_CLASS_TOKENS):
         errors.append(f"{relative}: nonstandard class token {token}")
 
-    if re.search(r"<style\b|\sstyle\s*=", html, flags=re.IGNORECASE):
+    if "<style" in html.lower() or re.search(r'\sstyle\s*=', html, flags=re.IGNORECASE):
         errors.append(f"{relative}: inline/page-specific CSS is not allowed")
 
     if "font-awesome" in html.lower():
