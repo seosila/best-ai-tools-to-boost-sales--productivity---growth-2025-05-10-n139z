@@ -1,0 +1,81 @@
+# SellBetterAI
+
+> SellBetterAI is a curated directory of AI tools for sales, marketing, ecommerce, customer support, and business growth. It helps business owners discover tools, compare options, and understand where products may fit into real workflows.
+
+SellBetterAI publishes tool profiles, category pages, and practical buying guides. Tool capabilities, pricing, and availability can change; consult each provider's official website for the latest details before making a purchasing decision.
+
+## Start here
+
+- [Homepage](https://sellbetterai.com/): Overview of the directory and its focus.
+- [Browse AI tools](https://sellbetterai.com/tools.html): Explore the directory by business need.
+- [Guides and insights](https://sellbetterai.com/blog/): Practical comparisons and buying guidance.
+- [About SellBetterAI](https://sellbetterai.com/about.html): Background and purpose of the project.
+- [How we choose tools](https://sellbetterai.com/how-we-choose-tools.html): Editorial approach to selecting and presenting tools.
+
+## Tool categories
+
+- [Sales AI tools](https://sellbetterai.com/tools/sales-ai-tools/): Prospecting, sales workflows, and sales productivity.
+- [AI CRMs and assistants](https://sellbetterai.com/tools/ai-crms-and-assistants/): CRM platforms and AI-assisted sales operations.
+- [Chatbots and virtual agents](https://sellbetterai.com/tools/chatbots-and-virtual-agents/): Conversational AI and virtual assistants.
+- [Email outreach AI](https://sellbetterai.com/tools/email-outreach-ai/): Cold email outreach and sales engagement.
+- [Ecommerce AI tools](https://sellbetterai.com/tools/ecommerce-ai-tools/): AI-assisted online store operations and growth.
+- [Customer support AI](https://sellbetterai.com/tools/customer-support-ai/): Customer service and support automation.
+- [Content and copywriting AI](https://sellbetterai.com/tools/content-and-copywriting-ai/): AI writing and marketing content.
+- [Ad copy and creative generators](https://sellbetterai.com/tools/ad-copy-and-creatives-generators/): Ad creative and campaign asset tools.
+- [Landing page builders](https://sellbetterai.com/tools/landing-page-builders/): Tools for creating and improving landing pages.
+- [Conversion optimization](https://sellbetterai.com/tools/conversion-optimization-cro/): Conversion rate optimization and user experience.
+- [Analytics and insights](https://sellbetterai.com/tools/analytics-and-insights/): Product, website, and marketing analytics.
+- [SEO AI tools](https://sellbetterai.com/tools/seo-ai-tools/): SEO research and content optimization.
+- [Pricing and revenue optimization](https://sellbetterai.com/tools/pricing-and-revenue-optimization/): Pricing and revenue optimization software.
+- [Social media AI tools](https://sellbetterai.com/tools/social-media-ai-tools/): Social content and publishing workflows.
+- [Video AI tools](https://sellbetterai.com/tools/video-ai-tools/): AI-assisted video creation and editing.
+
+## Selected tool profiles
+
+- [ChatGPT](https://sellbetterai.com/tools/chatbots-and-virtual-agents/chatgpt/): General-purpose AI assistant.
+- [Apollo](https://sellbetterai.com/tools/sales-ai-tools/apollo/): B2B prospecting and sales intelligence.
+- [Clay](https://sellbetterai.com/tools/sales-ai-tools/clay/): Prospect research and data enrichment workflows.
+- [Gong](https://sellbetterai.com/tools/sales-ai-tools/gong/): Revenue intelligence and sales conversation analysis.
+- [HubSpot Sales Hub](https://sellbetterai.com/tools/ai-crms-and-assistants/hubspot-sales-hub/): CRM and sales management.
+- [Salesforce Sales Cloud](https://sellbetterai.com/tools/ai-crms-and-assistants/salesforce-sales-cloud/): CRM and sales operations.
+- [Instantly](https://sellbetterai.com/tools/email-outreach-ai/instantly/): Cold email outreach.
+- [Smartlead](https://sellbetterai.com/tools/email-outreach-ai/smartlead/): Cold email campaign management.
+- [Shopify Sidekick](https://sellbetterai.com/tools/ecommerce-ai-tools/shopify-sidekick/): AI assistance for Shopify merchants.
+- [Klaviyo](https://sellbetterai.com/tools/ecommerce-ai-tools/klaviyo/): Ecommerce marketing automation.
+- [Gorgias](https://sellbetterai.com/tools/customer-support-ai/gorgias/): Customer support for ecommerce teams.
+- [Tidio](https://sellbetterai.com/tools/customer-support-ai/tidio/): Customer support and conversational automation.
+- [Jasper](https://sellbetterai.com/tools/content-and-copywriting-ai/jasper/): Marketing content creation.
+- [Copy.ai](https://sellbetterai.com/tools/content-and-copywriting-ai/copy-ai/): AI-assisted content and go-to-market workflows.
+- [Canva Magic Studio](https://sellbetterai.com/tools/ad-copy-and-creatives-generators/canva-magic-studio/): AI-assisted visual design.
+- [Semrush](https://sellbetterai.com/tools/seo-ai-tools/semrush/): SEO and digital marketing research.
+- [Google Analytics 4](https://sellbetterai.com/tools/analytics-and-insights/google-analytics-4/): Website and app analytics.
+- [Hotjar](https://sellbetterai.com/tools/conversion-optimization/hotjar/): Behavior analytics and user feedback.
+- [Runway](https://sellbetterai.com/tools/video-ai-tools/runway/): AI-assisted video generation.
+
+## Guides and comparisons
+
+- [Best AI sales tools for small businesses](https://sellbetterai.com/blog/best-ai-sales-tools-for-small-businesses.html): Choosing sales tools for smaller teams.
+- [Apollo vs Lusha](https://sellbetterai.com/blog/apollo-vs-lusha.html): Comparison of B2B prospecting platforms.
+- [Instantly vs Smartlead](https://sellbetterai.com/blog/instantly-vs-smartlead.html): Comparing cold email outreach platforms.
+- [Cold email outreach tools](https://sellbetterai.com/blog/cold-email-outreach-tools.html): Overview of outreach software and workflows.
+- [AI video tools for marketing](https://sellbetterai.com/blog/ai-video-tools-for-marketing.html): AI-assisted video use cases for marketing.
+- [Choosing AI SEO tools](https://sellbetterai.com/blog/choosing-ai-seo-tools.html): Considerations when evaluating SEO software.
+- [GA4 vs Mixpanel vs Amplitude](https://sellbetterai.com/blog/ga4-vs-mixpanel-vs-amplitude.html): Comparing analytics platforms.
+- [Landing page builders buying guide](https://sellbetterai.com/blog/landing-page-builders-buying-guide.html): Choosing software for landing pages.
+- [AI ad creative tools buying guide](https://sellbetterai.com/blog/ai-ad-creative-tools-buying-guide.html): Comparing AI-assisted ad creative options.
+- [AI social media tools buying guide](https://sellbetterai.com/blog/ai-social-media-tools-buying-guide.html): Evaluating social media workflows.
+- [Ecommerce AI tools buying guide](https://sellbetterai.com/blog/ecommerce-ai-tools-buying-guide.html): AI use cases for online stores.
+- [AI customer support tools buying guide](https://sellbetterai.com/blog/ai-customer-support-tools-buying-guide.html): Choosing customer support platforms.
+- [Jasper vs Copy.ai buying guide](https://sellbetterai.com/blog/jasper-vs-copy-ai-buying-guide.html): Comparing marketing content and go-to-market workflows.
+
+## Site discovery
+
+- [XML sitemap](https://sellbetterai.com/sitemap.xml): URLs published in the site's sitemap.
+- [Robots.txt](https://sellbetterai.com/robots.txt): Crawl directives and sitemap location.
+
+## Notes for readers and AI systems
+
+- Treat each linked page as the source of truth for its specific topic.
+- Tool listings are editorial discovery resources, not guarantees of product quality or suitability.
+- Verify current features, integrations, pricing, and terms on the vendor's official website.
+- Do not infer endorsements, partnerships, or first-party relationships unless a page explicitly states them.
