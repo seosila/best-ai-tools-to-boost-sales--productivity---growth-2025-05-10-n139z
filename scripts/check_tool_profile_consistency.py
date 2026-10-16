@@ -17,6 +17,7 @@ REQUIRED_MARKUP = {
     "profile card": '<article class="bg-white rounded-xl shadow-sm p-6 sm:p-8 space-y-8">',
     "profile logo frame": 'class="tool-logo-frame tool-logo-frame--profile mb-4"',
     "H1 typography": '<h1 class="text-3xl sm:text-4xl font-bold mb-4">',
+    "section heading typography": '<h2 class="text-2xl font-semibold mb-3">',
     "shared footer": '<footer class="sb-footer">',
     "shared site CSS": '<link rel="stylesheet" href="/assets/css/site.css">',
     "shared navigation script": '<script src="/assets/js/site-nav.js" defer>',
